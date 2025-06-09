@@ -27,16 +27,6 @@
             text-align: center;
             padding: 50px 20px;
         }
-        
-        /* ESTILO PARA A FOTO DE PERFIL NO TOPO */
-        .hero .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #eaf2f5;
-            margin-bottom: 20px;
-        }
 
         .hero h1 {
             font-size: 2.2em;
@@ -112,7 +102,6 @@
         .testimonial-quote { background-color: #fff; border-left: 5px solid #27ae60; padding: 20px; margin-bottom: 20px; font-style: italic; color: #555; text-align: left; border-radius: 0 8px 8px 0; }
         .testimonial-quote footer { font-style: normal; font-weight: 700; color: #333; margin-top: 10px; }
         
-        /* ESTILO PARA A SEÇÃO "SOBRE MIM" COM FOTO */
         .about-clinic {
             display: flex;
             align-items: center;
@@ -126,14 +115,6 @@
             min-width: 300px;
         }
         
-        .about-clinic img {
-            width: 100%;
-            max-width: 350px;
-            border-radius: 8px;
-            flex-shrink: 0;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
-        }
-        
         footer.main-footer {
             text-align: center;
             padding: 30px 20px;
@@ -144,9 +125,13 @@
         footer.main-footer a {
             color: #fff;
         }
-
-        @media (max-width: 768px) {
-            .about-clinic { text-align: center; justify-content: center; }
+        
+        footer.main-footer .address-note {
+            font-size: 0.8em;
+            font-style: italic;
+            color: #ccc;
+            margin-top: -10px;
+            margin-bottom: 15px;
         }
 
     </style>
@@ -154,8 +139,6 @@
 <body>
 
     <header class="hero">
-        <img src="https://i.imgur.com/sC7nZ2f.jpg" alt="Foto da Psicóloga Jéssica S. Barbosa" class="profile-pic">
-        
         <h1>Sente que a ansiedade e o estresse estão no controle?</h1>
         <p class="subtitle">Em João Pessoa, ofereço uma psicoterapia focada em TCC para você retomar as rédeas da sua vida, com um atendimento que une acolhimento e técnica.</p>
         <a href="https://wa.me/5583986309163" class="cta-button" target="_blank">Agende Sua Conversa Inicial</a>
@@ -172,3 +155,46 @@
                 <div class="benefit-item"><h3>Recuperar a Calma</h3><p>Aprender ferramentas práticas para lidar com a ansiedade, preocupações e o estresse do dia a dia.</p></div>
                 <div class="benefit-item"><h3>Melhorar Relacionamentos</h3><p>Desenvolver uma comunicação mais clara e construir relações mais saudáveis, seja no amor, na família ou no trabalho.</p></div>
                 <div class="benefit-item"><h3>Entender Suas Emoções</h3><p>Um espaço seguro para explorar seus sentimentos, aumentar seu autoconhecimento e fortalecer sua inteligência emocional.</p></div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="depoimentos" class="section light-bg">
+        <div class="container testimonials">
+            <h2>A Confiança de Quem Já Faz Terapia Comigo</h2>
+            <div class="testimonial-quote"><p>"Um ambiente onde finalmente me senti segura para falar sobre tudo, sem nenhum tipo de julgamento. Acolhimento é a palavra que define."</p><footer>— Paciente (avaliação anônima)</footer></div>
+            <div class="testimonial-quote"><p>"A abordagem prática me ajudou a ver resultados na minha rotina. Não é só conversa, são ferramentas que eu realmente uso e que funcionam."</p><footer>— Paciente (avaliação anônima)</footer></div>
+             <p style="margin-top:30px;">Estas são representações de temas comuns nas avaliações 5 estrelas que recebo. A sua privacidade e a de todos os meus pacientes é minha prioridade máxima.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Sobre Mim e Meu Espaço</h2>
+            <div class="about-clinic">
+                <div class="about-text">
+                    <p>Meu nome é <strong>Jéssica S. Barbosa</strong> (CRP 13/10484). Em meu consultório particular, minha missão é oferecer um espaço terapêutico que seja verdadeiramente seu, unindo a psicologia humana e acessível com a busca por resultados práticos para a sua vida.</p>
+                    <p>Com foco na Terapia Cognitivo-Comportamental (TCC), meu trabalho é colaborativo e transparente, focado em te ajudar a alcançar seus objetivos de forma concreta. O consultório está localizado no coração de Miramar, em um dos maiores centros médicos da região, para garantir seu total conforto e discrição.</p>
+                    <p><strong>Endereço:</strong> R. Antônio Rabelo Júnior, 170, Sala 503 - Miramar, João Pessoa - PB</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section light-bg">
+        <div class="container">
+            <h2>Pronto(a) para Iniciar Sua Mudança?</h2>
+            <p>O primeiro passo é o mais corajoso. Permita-se receber o apoio profissional que você merece.</p>
+            <a href="https://wa.me/5583986309163" class="cta-button" target="_blank">Fale Comigo no WhatsApp</a>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <p><strong>Jéssica S. Barbosa</strong> | Psicóloga Clínica | CRP: 13/10484</p>
+        <p>Consultório em Miramar, João Pessoa - PB</p>
+        <p class="address-note">Atendimento em um dos maiores Centros Médicos da Região</p>
+        <p><a href="#">Política de Privacidade</a></p>
+    </footer>
+
+</body>
+</html>
