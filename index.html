@@ -18,7 +18,7 @@
       gtag('js', new Date());
     
       gtag('config', 'AW-16890450366'); // Configuração para Google Ads
-      gtag('config', 'G-7SSF4QG6QD');    // **NOVA CONFIGURAÇÃO PARA GOOGLE ANALYTICS 4**
+      gtag('config', 'G-7SSF4QG6QD');    // NOVA CONFIGURAÇÃO PARA GOOGLE ANALYTICS 4
     </script>
     
     <script>
@@ -127,8 +127,11 @@
             background-color: #f0f4f7; /* Fundo claro, sem imagem */
             color: #2c3e50; /* Texto escuro para contraste */
             text-align: center;
-            padding: 150px 20px 100px; /* Espaçamento interno */
-            margin-top: 100px; /* MAIS ESPAÇO AQUI: Aumentado para 100px */
+            padding-top: 120px; /* Espaçamento interno superior, ajustado para não ficar sob o header */
+            padding-bottom: 100px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: 80px; /* Espaço para o header fixo */
             position: relative;
         }
         /* REMOVEMOS O .hero-overlay CSS POIS NÃO TEM IMAGEM DE FUNDO */
@@ -139,6 +142,8 @@
             max-width: 800px;
             line-height: 1.2;
             margin-bottom: 20px;
+            margin-left: auto; /* Centraliza o h1 */
+            margin-right: auto; /* Centraliza o h1 */
         }
 
         .hero-section p {
@@ -146,6 +151,8 @@
             color: #555; /* Texto um pouco mais claro */
             max-width: 700px;
             margin-bottom: 30px;
+            margin-left: auto; /* Centraliza o p */
+            margin-right: auto; /* Centraliza o p */
         }
         
         .cta-button {
@@ -226,195 +233,4 @@
         .service-card i { /* Ícones dos serviços */
             font-size: 2.5em;
             color: #4caf50;
-            margin-bottom: 20px;
-            display: block; /* Para o ícone ficar em sua própria linha */
-        }
-
-        .service-card h3 {
-            font-size: 1.4em;
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-
-        .service-card p {
-            font-size: 0.95em;
-            color: #666;
-        }
-
-        /* --- Seção de Depoimentos --- */
-        .testimonials-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            text-align: center;
-        }
-
-        .testimonial-card {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            max-width: 350px;
-            text-align: left; /* Alinha o texto dentro do card à esquerda */
-        }
-
-        .testimonial-card p {
-            font-style: italic;
-            font-size: 1.1em;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .testimonial-card p:last-child { /* Para o nome do paciente */
-            font-weight: 600;
-            margin-top: 0;
-            text-align: right; /* Alinha o nome do paciente à direita */
-            font-style: normal; /* Remove itálico do nome */
-            color: #333;
-        }
-
-        /* --- Rodapé --- */
-        .main-footer {
-            background-color: #2c3e50; /* Cor escura do rodapé */
-            color: #ecf0f1;
-            padding: 40px 0;
-            text-align: center;
-            font-size: 0.9em;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .footer-info, .footer-social {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .footer-social a {
-            color: #fff;
-            font-size: 1.5em;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-social a:hover {
-            color: #4caf50; /* Cor de destaque ao passar o mouse */
-        }
-
-        /* --- Responsividade (para telas menores) --- */
-        @media (max-width: 768px) {
-            /* Ajustes gerais de espaçamento para mobile */
-            .section {
-                padding: 40px 15px; /* Reduz padding lateral e ajusta vertical */
-            }
-
-            .section h2 {
-                font-size: 1.8em;
-                margin-bottom: 30px; /* Reduz margem de título */
-            }
-
-            .container {
-                padding: 0 15px; /* Ajusta padding do container em mobile */
-            }
-
-            /* Header em mobile */
-            .main-header .container {
-                flex-direction: column; /* Menu vertical */
-                gap: 10px; /* Reduz espaçamento */
-                padding: 10px 15px; /* Ajusta padding do header */
-                align-items: center; /* Adicionado para centralizar logo e navegação */
-            }
-            .main-nav { /* Adicionado para garantir o alinhamento */
-                width: 100%;
-                text-align: center;
-            }
-            .main-nav ul {
-                flex-direction: column;
-                align-items: center; /* Já centraliza os itens da lista */
-                gap: 8px; /* Reduz espaçamento */
-            }
-            .btn-whats-nav {
-                margin-left: 0;
-                margin-top: 10px; /* Adiciona margem acima do botão */
-            }
-
-            /* Hero Section em mobile */
-            .hero-section {
-                padding: 100px 15px 60px; /* Ajusta padding */
-                /* Ajuste de padding-top para o conteúdo não ficar por baixo do header fixo em mobile */
-                padding-top: 160px; 
-            }
-            .hero-section h1 {
-                font-size: 2em; /* Reduz tamanho da fonte do título */
-            }
-            .hero-section p {
-                font-size: 1em; /* Reduz tamanho da fonte do parágrafo */
-            }
-
-            /* Seção Sobre em mobile */
-            .about-content {
-                flex-direction: column; /* Colunas empilham */
-                text-align: center;
-                gap: 30px; /* Reduz espaçamento */
-            }
-            .about-image {
-                order: -1; /* Imagem acima do texto no mobile */
-                min-width: auto; /* Remove min-width para flexibilidade */
-                max-width: 80%; /* Garante que a imagem não seja muito grande */
-                margin: 0 auto; /* Centraliza a imagem */
-            }
-            .about-image img {
-                border-radius: 50%; /* Faz a imagem da seção "Sobre" redonda */
-                width: 180px; /* Tamanho fixo para foto de perfil */
-                height: 180px; /* Torna a imagem quadrada antes do border-radius */
-                object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
-            }
-            .about-text {
-                min-width: auto; /* Remove min-width */
-            }
-
-            /* Cards de Serviço em mobile */
-            .services-grid {
-                grid-template-columns: 1fr; /* Uma coluna no mobile */
-                gap: 20px; /* Reduz espaçamento */
-            }
-            .service-card {
-                padding: 25px; /* Reduz padding */
-            }
-
-            /* Rodapé em mobile */
-            .footer-content {
-                flex-direction: column; /* Conteúdo do rodapé empilha */
-                gap: 15px; /* Reduz espaçamento */
-            }
-            .footer-info, .footer-social {
-                min-width: auto; /* Remove min-width */
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">Jéssica S. Barbosa</div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#hero">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#atendimento">Atendimento</a></li>
-                    <li><a href="#depoimentos">Depoimentos</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><a href="https://wa.me/5583986309163" class="btn-whats-nav" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5583986309163');"><i class="fab fa-whatsapp"></i> Agende Online</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="hero" class="hero-section
+            margin-bottom
