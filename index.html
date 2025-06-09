@@ -70,21 +70,11 @@
             color: #2c3e50;
         }
 
-        .social-proof-bar a {
-            color: #2c3e50;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .social-proof-bar a:hover {
-            text-decoration: underline;
-        }
-
         .section {
             padding: 60px 20px;
             text-align: center;
         }
-
+        
         .section.light-bg {
             background-color: #fff;
         }
@@ -95,6 +85,33 @@
             margin-bottom: 40px;
         }
 
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .benefits-list li::before {
+            content: '✓';
+            color: #27ae60;
+            font-weight: 700;
+            margin-right: 15px;
+        }
+        
+        .main-text {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: left;
+            line-height: 1.8;
+        }
+        
         footer.main-footer {
             text-align: center;
             padding: 30px 20px;
@@ -106,64 +123,49 @@
             color: #fff;
         }
 
-        footer.main-footer .address-note {
-            font-size: 0.8em;
-            font-style: italic;
-            color: #ccc;
-            margin-top: -10px;
-            margin-bottom: 15px;
-        }
-
-        .about-section {
-            text-align: left;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-
-        .services-section {
-            text-align: left;
-            max-width: 700px;
-            margin: 40px auto 0;
-            line-height: 1.8;
-        }
-
     </style>
 </head>
 <body>
 
     <header class="hero">
-        <h1>Um Espaço Seguro para Cuidar da Sua Saúde Mental em João Pessoa</h1>
-        <p class="subtitle">Ofereço uma escuta qualificada para suas maiores questões, com consultas online e presenciais eficazes, focadas no seu bem-estar.</p>
-        <a href="https://wa.me/5583986309163" class="cta-button" target="_blank">Agende Sua Conversa Inicial</a>
+        <h1>Eu sei que buscar ajuda é o passo mais corajoso.</h1>
+        <p class="subtitle">Meu nome é Jéssica S. Barbosa e meu consultório em João Pessoa é um espaço seguro e sigiloso para você ser ouvido(a) e encontrar clareza.</p>
+        <a href="https://wa.me/5583986309163" class="cta-button" target="_blank">Agende uma Conversa Inicial</a>
     </header>
 
     <div class="social-proof-bar">
-        <span>Em João Pessoa, Meu Compromisso é Refletido em Avaliações <strong>5 Estrelas</strong> no Google.</span>
+        <span>Avaliada com <strong>5 estrelas</strong> no Google por pacientes de João Pessoa.</span>
     </div>
 
     <section class="section light-bg">
         <div class="container">
-            <h2 style="text-align: left;">Escuta Qualificada, Ambiente Seguro</h2>
-            <div class="about-section">
-                <p>Acredito que a terapia eficaz começa com a confiança. Por isso, meu compromisso fundamental é oferecer um ambiente 100% sigiloso e livre de julgamentos. Este é um espaço onde você tem a total segurança para explorar suas maiores questões, se sentir compreendido(a) e, juntos, encontrarmos os melhores caminhos para você.</p>
-            </div>
+            <h2>A terapia pode ser o seu caminho se...</h2>
+            <ul class="benefits-list">
+                <li>...você sente que a ansiedade e o estresse são constantes.</li>
+                <li>...você busca melhorar seus relacionamentos e sua comunicação.</li>
+                <li>...você deseja entender melhor seus próprios sentimentos e reações.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <h2>Como Eu Trabalho</h2>
+            <p class="main-text">A base do meu trabalho é a confiança. Utilizo a Terapia Cognitivo-Comportamental (TCC) porque ela nos oferece ferramentas práticas e um caminho focado. Em nossas sessões, vamos trabalhar para entender seus padrões de pensamento e comportamento, e construir juntos novas formas de lidar com os desafios. Meu papel é ser sua guia neste processo, em um ambiente de total sigilo e acolhimento.</p>
         </div>
     </section>
 
-    <section class="section">
+    <section class="section light-bg">
         <div class="container">
-            <h2 style="text-align: left;">Consultas Online e Presenciais</h2>
-            <div class="services-section">
-                <p>Para se adaptar à sua rotina, ofereço duas modalidades de atendimento com a mesma eficácia e dedicação. Seja no conforto da sua casa através do <strong>atendimento online</strong> ou em nosso espaço acolhedor no <strong>consultório em Miramar</strong>, o foco será sempre o seu desenvolvimento e saúde mental.</p>
-            </div>
+            <h2>Vamos Conversar?</h2>
+            <p class="main-text" style="text-align: center;">O primeiro passo não precisa ser um grande salto. Pode ser uma conversa para tirar suas dúvidas e para você entender como a terapia pode funcionar no seu caso. Estou aqui para te ouvir.</p>
+            <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" style="margin-top: 25px;">Fale Comigo no WhatsApp</a>
         </div>
     </section>
 
     <footer class="main-footer">
         <p><strong>Jéssica S. Barbosa</strong> | Psicóloga Clínica | CRP: 13/10484</p>
-        <p>Consultório em João Pessoa - PB</p>
-        <p class="address-note">Atendimento online e presencial</p>
+        <p>Consultório em Miramar, João Pessoa - PB</p>
         <p><a href="#">Política de Privacidade</a></p>
     </footer>
 
