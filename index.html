@@ -16,11 +16,11 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
+    
       gtag('config', 'AW-16890450366'); // Configuração para Google Ads
       gtag('config', 'G-7SSF4QG6QD');   // **NOVA CONFIGURAÇÃO PARA GOOGLE ANALYTICS 4**
     </script>
-
+    
     <script>
     function gtag_report_conversion(url) {
       var callback = function () {
@@ -147,7 +147,7 @@
             max-width: 700px;
             margin-bottom: 30px;
         }
-
+        
         .cta-button {
             display: inline-block;
             background-color: #4caf50; /* Cor de destaque */
@@ -274,45 +274,89 @@
             color: #4caf50; /* Cor de destaque ao passar o mouse */
         }
 
-        /* --- Responsividade (para telas menores) --- */
+        /* --- NOVO: Responsividade OTIMIZADA (para telas menores) --- */
         @media (max-width: 768px) {
+            /* Ajustes gerais de espaçamento para mobile */
+            .section {
+                padding: 40px 15px; /* Reduz padding lateral e ajusta vertical */
+            }
+
+            .section h2 {
+                font-size: 1.8em;
+                margin-bottom: 30px; /* Reduz margem de título */
+            }
+
+            .container {
+                padding: 0 15px; /* Ajusta padding do container em mobile */
+            }
+
+            /* Header em mobile */
             .main-header .container {
                 flex-direction: column; /* Menu vertical */
-                gap: 15px;
+                gap: 10px; /* Reduz espaçamento */
+                padding: 10px 15px; /* Ajusta padding do header */
             }
             .main-nav ul {
                 flex-direction: column;
                 align-items: center;
-                gap: 10px;
+                gap: 8px; /* Reduz espaçamento */
             }
             .btn-whats-nav {
                 margin-left: 0;
+                margin-top: 10px; /* Adiciona margem acima do botão */
             }
 
+            /* Hero Section em mobile */
+            .hero-section {
+                padding: 100px 15px 60px; /* Ajusta padding */
+                /* Ajuste de padding-top para o conteúdo não ficar por baixo do header fixo em mobile */
+                padding-top: 120px; 
+            }
             .hero-section h1 {
-                font-size: 2em;
+                font-size: 2em; /* Reduz tamanho da fonte do título */
             }
             .hero-section p {
-                font-size: 1em;
+                font-size: 1em; /* Reduz tamanho da fonte do parágrafo */
             }
 
+            /* Seção Sobre em mobile */
             .about-content {
                 flex-direction: column; /* Colunas empilham */
                 text-align: center;
+                gap: 30px; /* Reduz espaçamento */
             }
             .about-image {
                 order: -1; /* Imagem acima do texto no mobile */
+                min-width: auto; /* Remove min-width para flexibilidade */
+                max-width: 80%; /* Garante que a imagem não seja muito grande */
+                margin: 0 auto; /* Centraliza a imagem */
+            }
+            .about-image img {
+                border-radius: 50%; /* Faz a imagem da seção "Sobre" redonda */
+                width: 180px; /* Tamanho fixo para foto de perfil */
+                height: 180px; /* Torna a imagem quadrada antes do border-radius */
+                object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+            }
+            .about-text {
+                min-width: auto; /* Remove min-width */
             }
 
-            .section {
-                padding: 60px 0;
-            }
-            .section h2 {
-                font-size: 1.8em;
-            }
-
+            /* Cards de Serviço em mobile */
             .services-grid {
                 grid-template-columns: 1fr; /* Uma coluna no mobile */
+                gap: 20px; /* Reduz espaçamento */
+            }
+            .service-card {
+                padding: 25px; /* Reduz padding */
+            }
+
+            /* Rodapé em mobile */
+            .footer-content {
+                flex-direction: column; /* Conteúdo do rodapé empilha */
+                gap: 15px; /* Reduz espaçamento */
+            }
+            .footer-info, .footer-social {
+                min-width: auto; /* Remove min-width */
             }
         }
     </style>
@@ -410,19 +454,21 @@
             <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5583986309163');"><i class="fab fa-whatsapp"></i> Fale Comigo no WhatsApp</a>
             <p style="margin-top: 20px; font-size: 1.1em; color: #555;">Ou envie um e-mail para: psicologa.jessicasoares@email.com</p>
             <p style="font-size: 1.1em; color: #555;">Endereço: Consultório em Miramar, João Pessoa - PB</p>
-            </div>
-    </div>
-</section>
+                </div>
+    </section>
 
-<footer class="main-footer">
-    <div class="container footer-content">
-        <div class="footer-info">
-            <p><strong>Jéssica S. Barbosa</strong> | Psicóloga Clínica</p>
-            <p>CRP: 13/10484 | Consultório em Miramar, João Pessoa - PB</p>
-            <p>&copy; 2025 Todos os direitos reservados.</p>
-        </div>
-        <div class="footer-social">
-            <a href="https://www.instagram.com/psicologia.jessicasoares" target="_blank"><i class="fab fa-instagram"></i></a>
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p><strong>Jéssica S. Barbosa</strong> | Psicóloga Clínica</p>
+                <p>CRP: 13/10484 | Consultório em Miramar, João Pessoa - PB</p>
+                <p>&copy; 2025 Todos os direitos reservados.</p>
             </div>
-    </div>
-</footer>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/psicologia.jessicasoares" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+        </div>
+    </footer>
+
+</body>
+</html>
