@@ -22,9 +22,8 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
-      gtag('config', 'AW-16890450366'); // Configuração para Google Ads
-      gtag('config', 'G-7SSF4QG6QD');    // NOVA CONFIGURAÇÃO PARA GOOGLE ANALYTICS 4 (SUBSTITUA PELO SEU ID GA4)
+      gtag('config', 'AW-16890450366'); // Google Ads ID
+      gtag('config', 'G-7SSF4QG6QD');    // Google Analytics 4 ID
     </script>
     
     <script>
@@ -35,7 +34,7 @@
         }
       };
       gtag('event', 'conversion', {
-          'send_to': 'AW-16890450366/EmO4CMTxx9YaEL6j__U-', // ID DA SUA CONVERSÃO DO GOOGLE ADS
+          'send_to': 'AW-16890450366/EmO4CMTxx9YaEL6j__U-', 
           'event_callback': callback
       });
       return false;
@@ -43,326 +42,413 @@
     </script>
 
     <style>
-        /* Estilos Globais e Reset Básico */
-        body {
-            font-family: 'Open Sans', sans-serif; /* Fonte padrão para o corpo do texto */
-            margin: 0;
-            padding: 0;
-            color: #3a3a3a; /* Cor de texto principal para contraste */
-            background-color: #f9f9f9; /* Fundo geral claro da página */
-            line-height: 1.7; /* Espaçamento entre linhas para melhor leitura */
-            -webkit-font-smoothing: antialiased; /* Suavização de fonte para WebKit (Chrome, Safari) */
-            -moz-osx-font-smoothing: grayscale; /* Suavização de fonte para Firefox */
+        body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; color: #3a3a3a; background-color: #f9f9f9; line-height: 1.7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; color: #2c3e50; font-weight: 700; margin-top: 0; margin-bottom: 20px; }
+        p { margin-bottom: 1em; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        .main-header { background-color: #fff; padding: 15px 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; }
+        .main-header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8em; font-weight: 800; color: #4caf50; line-height: 1; }
+        .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 25px; }
+        .main-nav a { color: #555; font-weight: 500; transition: color 0.3s ease; white-space: nowrap; }
+        .main-nav a:hover { color: #4caf50; }
+        .btn-whats-nav { background-color: #4caf50; color: #fff !important; padding: 8px 18px; border-radius: 5px; font-weight: 600; transition: background-color 0.3s ease, transform 0.2s ease; margin-left: 20px; box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3); }
+        .btn-whats-nav:hover { background-color: #388e3c; transform: translateY(-1px); }
+
+        /* Hero Section */
+        .hero-section { background-color: #f0f4f7; color: #2c3e50; text-align: center; padding: 120px 20px 100px; margin-top: 80px; position: relative; }
+        .hero-section h1 { font-size: 3.2em; color: #2c3e50; max-width: 900px; line-height: 1.2; margin: 0 auto 25px auto; font-weight: 800; }
+        .hero-section p { font-size: 1.3em; color: #555; max-width: 800px; margin: 0 auto 40px auto; }
+        .cta-button { display: inline-block; background-color: #4caf50; color: #fff !important; padding: 16px 40px; text-decoration: none; font-weight: 700; border-radius: 50px; font-size: 1.15em; transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; box-shadow: 0 5px 20px rgba(76, 175, 80, 0.4); }
+        .cta-button:hover { background-color: #388e3c; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(76, 175, 80, 0.5); }
+
+        /* General Sections */
+        .section { padding: 80px 0; text-align: center; }
+        .section.light-bg { background-color: #f0f4f7; }
+        .section h2 { font-size: 2.6em; margin-bottom: 40px; font-weight: 700; color: #2c3e50; }
+
+        /* About Section */
+        .about-content { display: flex; flex-wrap: wrap; align-items: center; gap: 60px; text-align: left; }
+        .about-image, .about-text { flex: 1; min-width: 300px; }
+        .about-image img { max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); display: block; margin: 0 auto; }
+        .about-text p { font-size: 1.1em; color: #555; margin-bottom: 1.5em; }
+
+        /* Service/Specialties Cards */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: left; margin-top: 50px; }
+        .service-card { background-color: #fff; padding: 35px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
+        .service-card:hover { transform: translateY(-7px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); }
+        .service-card i { font-size: 3em; color: #4caf50; margin-bottom: 20px; display: block; }
+        .service-card h3 { font-size: 1.5em; margin-bottom: 12px; color: #2c3e50; font-weight: 600; }
+        .service-card p { font-size: 1em; color: #666; flex-grow: 1; }
+
+        /* Testimonials */
+        .testimonials-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+        .testimonial-card { background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); max-width: 380px; text-align: left; flex-basis: calc(33.333% - 20px); flex-grow: 1; flex-shrink: 1; min-width: 280px; }
+        .testimonial-card p:first-of-type { font-style: italic; font-size: 1.1em; color: #555; margin-bottom: 15px; position: relative; padding-left: 20px; }
+        .testimonial-card p:first-of-type::before { content: "\201C"; font-size: 3em; color: #4caf50; position: absolute; left: 0; top: -10px; opacity: 0.5; }
+        .testimonial-card p:last-child { font-weight: 700; margin-top: 0; text-align: right; font-style: normal; color: #333; }
+
+        /* FAQ */
+        .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
+        .faq-item { background-color: #fff; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05); overflow: hidden; }
+        .faq-question { padding: 20px 25px; background-color: #fff; color: #2c3e50; font-weight: 600; font-size: 1.1em; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; transition: background-color 0.3s ease; }
+        .faq-question:hover { background-color: #f5f5f5; }
+        .faq-question .icon { font-size: 1em; transition: transform 0.3s ease; }
+        .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.4s ease-out; color: #555; }
+        .faq-answer p { padding-top: 15px; padding-bottom: 15px; margin: 0; }
+        .faq-item.active .faq-question { background-color: #e8f5e9; border-bottom: 1px solid #4caf50; }
+        .faq-item.active .faq-question .icon { transform: rotate(180deg); }
+        .faq-item.active .faq-answer { max-height: 200px; padding-top: 20px; padding-bottom: 20px; } /* Ajuste max-height conforme o maior texto */
+
+        /* Contact Section */
+        .contact-content { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; text-align: left; max-width: 900px; margin: 0 auto; }
+        .contact-info, .contact-form-container { flex: 1; min-width: 300px; }
+        .contact-info p { font-size: 1.1em; margin-bottom: 15px; color: #555; }
+        .contact-info i { color: #4caf50; margin-right: 10px; font-size: 1.2em; }
+        .contact-form-container { background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); }
+        .contact-form-container h3 { text-align: center; margin-bottom: 25px; color: #2c3e50; font-size: 1.8em; }
+        .contact-form-container form label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
+        .contact-form-container form input[type="text"], .contact-form-container form input[type="email"], .contact-form-container form textarea { width: calc(100% - 20px); padding: 12px 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; font-size: 1em; color: #3a3a3a; transition: border-color 0.3s ease; }
+        .contact-form-container form input[type="text"]:focus, .contact-form-container form input[type="email"]:focus, .contact-form-container form textarea:focus { border-color: #4caf50; outline: none; box-shadow: 0 0 5px rgba(76, 175, 80, 0.3); }
+        .contact-form-container form textarea { resize: vertical; min-height: 100px; }
+        .contact-form-container form button { display: block; width: 100%; background-color: #4caf50; color: #fff; padding: 15px 25px; border: none; border-radius: 5px; font-size: 1.1em; font-weight: 700; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s; box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4); }
+        .contact-form-container form button:hover { background-color: #388e3c; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(76, 175, 80, 0.5); }
+        .google-map { margin-top: 40px; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); }
+        .google-map iframe { width: 100%; height: 400px; border: 0; }
+
+        /* Footer */
+        .main-footer { background-color: #2c3e50; color: #ecf0f1; padding: 40px 0; text-align: center; font-size: 0.9em; }
+        .footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
+        .footer-info, .footer-social { flex: 1; min-width: 250px; text-align: left; }
+        .footer-social { text-align: right; }
+        .footer-social a { color: #fff; font-size: 1.5em; margin: 0 10px; transition: color 0.3s ease; }
+        .footer-social a:hover { color: #4caf50; }
+
+        /* Section Divider */
+        .section-divider { border: 0; height: 1px; background-color: #eee; margin: 0; }
+
+        /* Responsiveness */
+        @media (max-width: 992px) {
+            .hero-section h1 { font-size: 2.8em; }
+            .hero-section p { font-size: 1.1em; }
+            .section h2 { font-size: 2.2em; }
+            .about-content { gap: 30px; }
+            .services-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+            .testimonial-card { flex-basis: calc(50% - 15px); }
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif; /* Fonte para títulos, mais marcante */
-            color: #2c3e50; /* Cor de título principal */
-            font-weight: 700; /* Peso da fonte para títulos */
-            margin-top: 0;
-            margin-bottom: 20px;
+        @media (max-width: 768px) {
+            .section { padding: 40px 15px; }
+            .section h2 { font-size: 1.8em; margin-bottom: 30px; }
+            .container { padding: 0 15px; }
+            .main-header .container { flex-direction: column; gap: 10px; padding: 10px 15px; align-items: center; }
+            .main-nav { width: 100%; text-align: center; }
+            .main-nav ul { flex-direction: column; align-items: center; gap: 8px; margin: 0 auto; }
+            .btn-whats-nav { margin-left: 0; margin-top: 10px; }
+            .hero-section { padding-top: 160px; padding-bottom: 60px; margin-top: 0; }
+            .hero-section h1 { font-size: 2.4em; }
+            .hero-section p { font-size: 1em; }
+            .cta-button { padding: 12px 30px; font-size: 1em; }
+            .about-content { flex-direction: column; text-align: center; gap: 30px; }
+            .about-image { order: -1; min-width: auto; max-width: 80%; margin: 0 auto; }
+            .about-image img { border-radius: 50%; width: 180px; height: 180px; object-fit: cover; }
+            .about-text { min-width: auto; }
+            .services-grid { grid-template-columns: 1fr; gap: 20px; }
+            .service-card { padding: 25px; }
+            .testimonial-card { flex-basis: 100%; }
+            .faq-question { font-size: 1em; padding: 15px 20px; }
+            .faq-answer { padding: 0 20px; }
+            .faq-answer p { padding-top: 10px; padding-bottom: 10px; }
+            .contact-content { flex-direction: column; gap: 30px; }
+            .contact-info, .contact-form-container { min-width: auto; }
+            .google-map iframe { height: 300px; }
+            .footer-content { flex-direction: column; gap: 15px; }
+            .footer-info, .footer-social { min-width: auto; text-align: center; }
+            .footer-social a { margin: 0 8px; }
         }
 
-        p {
-            margin-bottom: 1em; /* Espaçamento padrão entre parágrafos */
+        @media (max-width: 480px) {
+            .hero-section h1 { font-size: 1.8em; }
+            .hero-section p { font-size: 0.9em; }
+            .section h2 { font-size: 1.5em; }
+            .logo { font-size: 1.5em; }
+            .main-nav a { font-size: 0.9em; }
+            .btn-whats-nav { padding: 6px 12px; font-size: 0.9em; }
         }
+    </style>
+</head>
+<body>
 
-        a {
-            text-decoration: none; /* Remove sublinhado padrão dos links */
-            color: inherit; /* Links herdam a cor do elemento pai por padrão */
-        }
+    <header class="main-header">
+        <div class="container">
+            <a href="#hero" class="logo" aria-label="Jéssica S. Barbosa - Início">Jéssica S. Barbosa</a>
+            <nav class="main-nav" aria-label="Navegação Principal">
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#atendimento">Atendimento</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="https://wa.me/5583986309163" class="btn-whats-nav" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion('https://wa.me/5583986309163');"><i class="fab fa-whatsapp"></i> Agende Online</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        /* Container centralizador de conteúdo */
-        .container {
-            max-width: 1100px; /* Largura máxima do conteúdo para evitar linhas muito longas */
-            margin: 0 auto; /* Centraliza o container na página */
-            padding: 0 20px; /* Espaçamento lateral interno */
-        }
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h1>Sua Jornada para o Bem-Estar Começa Aqui.</h1>
+                <p>Um espaço seguro e acolhedor para você encontrar clareza, superar desafios e florescer.</p>
+                <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion('https://wa.me/5583986309163');">Agende sua Primeira Conversa</a>
+            </div>
+        </section>
 
-        /* --- Header e Navegação Fixa --- */
-        .main-header {
-            background-color: #fff; /* Fundo branco para o cabeçalho */
-            padding: 15px 0; /* Espaçamento interno vertical */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Sombra sutil para destaque */
-            position: fixed; /* Fixa o cabeçalho no topo da viewport */
-            width: 100%; /* Ocupa toda a largura */
-            top: 0; /* Alinha ao topo */
-            left: 0; /* Alinha à esquerda */
-            z-index: 1000; /* Garante que fique acima de outros elementos */
-        }
+        <hr class="section-divider" aria-hidden="true">
 
-        .main-header .container {
-            display: flex; /* Usa flexbox para alinhamento de itens */
-            justify-content: space-between; /* Distribui espaço entre logo e navegação */
-            align-items: center; /* Centraliza verticalmente os itens */
-        }
+        <section id="sobre" class="section light-bg">
+            <div class="container">
+                <h2>Sobre Mim</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Olá! Meu nome é Jéssica S. Barbosa, psicóloga clínica com **CRP: 13/10484**. Minha paixão é facilitar a sua jornada em direção ao autoconhecimento, equilíbrio emocional e bem-estar.</p>
+                        <p>Com anos de experiência e dedicação, meu trabalho é oferecer um ambiente terapêutico seguro, ético e empático, onde você possa se sentir à vontade para explorar seus sentimentos, pensamentos e desafios, sem julgamentos.</p>
+                        <p>Minha abordagem principal é a **Terapia Cognitivo-Comportamental (TCC)**, uma metodologia comprovada e focada em resultados práticos. Juntos, vamos identificar padrões de pensamento e comportamento que geram sofrimento e desenvolver estratégias eficazes para você lidar com as adversidades da vida, construir resiliência e promover mudanças duradouras.</p>
+                        <p>Acredito profundamente no potencial de cada pessoa para superar obstáculos e encontrar sua própria força. Se você busca um caminho para viver com mais leveza, autoconfiança e propósito, estou aqui para caminhar com você.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://raw.githubusercontent.com/psicojessicasoares/landing-page/main/Captura%20de%20tela%202025-06-09%20131856%20(1).png" alt="Retrato da Psicóloga Jéssica S. Barbosa">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        .logo {
-            font-size: 1.8em; /* Tamanho da fonte do logo */
-            font-weight: 800; /* Mais peso para o logo */
-            color: #4caf50; /* Cor de destaque para o logo (Verde) */
-            line-height: 1; /* Garante alinhamento sem quebras de linha */
-        }
+        <hr class="section-divider" aria-hidden="true">
 
-        .main-nav ul {
-            list-style: none; /* Remove marcadores de lista */
-            margin: 0;
-            padding: 0;
-            display: flex; /* Usa flexbox para os itens do menu */
-            gap: 25px; /* Espaçamento entre os itens do menu */
-        }
+        <section id="especialidades" class="section">
+            <div class="container">
+                <h2>Especialidades e Áreas de Atuação</h2>
+                <p>Através da Terapia Cognitivo-Comportamental (TCC), ofereço suporte especializado nas seguintes áreas:</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-frown-open"></i>
+                        <h3>Transtornos de Humor</h3>
+                        <p>Acompanhamento e estratégias para lidar com Depressão, Distimia e Bipolaridade, buscando o reestabelecimento do bem-estar e da qualidade de vida.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-hand-fist"></i>
+                        <h3>Transtornos de Ansiedade</h3>
+                        <p>Ferramentas para manejar Ansiedade Generalizada, Síndrome do Pânico, Fobias, Transtorno Obsessivo-Compulsivo (TOC) e Estresse.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Autoconhecimento</h3>
+                        <p>Processo de exploração interna para compreender seus pensamentos, emoções e comportamentos, promovendo clareza e fortalecimento pessoal.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Questões de Autoestima</h3>
+                        <p>Trabalho para fortalecer a autoimagem, a autoconfiança e o amor-próprio, construindo uma relação mais saudável consigo mesmo(a).</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Habilidades Sociais e Relacionamentos</h3>
+                        <p>Desenvolvimento de comunicação assertiva, resolução de conflitos e construção de relacionamentos mais saudáveis e satisfatórios.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-sad-cry"></i>
+                        <h3>Luto e Perdas</h3>
+                        <p>Apoio psicológico para lidar com o processo de luto, separações, mudanças significativas e outras formas de perdas emocionais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        .main-nav a {
-            color: #555; /* Cor padrão dos links do menu */
-            font-weight: 500; /* Peso da fonte */
-            transition: color 0.3s ease; /* Transição suave de cor ao passar o mouse */
-            white-space: nowrap; /* Evita quebra de linha em itens curtos (ex: "Início") */
-        }
+        <hr class="section-divider" aria-hidden="true">
 
-        .main-nav a:hover {
-            color: #4caf50; /* Cor de destaque ao passar o mouse */
-        }
+        <section id="atendimento" class="section light-bg">
+            <div class="container">
+                <h2>Modalidades de Atendimento</h2>
+                <p>Escolha a modalidade que melhor se adapta às suas necessidades e rotina:</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>Atendimento Online</h3>
+                        <p>Conveniência e flexibilidade para você cuidar da sua saúde mental de qualquer lugar, com sessões por videochamada seguras e sigilosas.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-building"></i>
+                        <h3>Atendimento Presencial</h3>
+                        <p>Consultas no consultório em Miramar, João Pessoa - PB, para quem prefere o contato direto e um ambiente terapêutico dedicado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        .btn-whats-nav { /* Estilo para o botão de WhatsApp no menu */
-            background-color: #4caf50; /* Cor de destaque (Verde) */
-            color: #fff !important; /* Cor do texto, !important para sobrescrever inherit */
-            padding: 8px 18px; /* Espaçamento interno */
-            border-radius: 5px; /* Cantos arredondados */
-            font-weight: 600; /* Peso da fonte */
-            transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
-            margin-left: 20px; /* Espaçamento em relação aos outros itens do menu */
-            box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3); /* Sombra para o botão */
-        }
+        <hr class="section-divider" aria-hidden="true">
 
-        .btn-whats-nav:hover {
-            background-color: #388e3c; /* Cor mais escura ao passar o mouse */
-            transform: translateY(-1px); /* Efeito de leve levantamento */
-        }
+        <section id="depoimentos" class="section">
+            <div class="container">
+                <h2>O Que Dizem Meus Pacientes</h2>
+                <div class="testimonials-container">
+                    <div class="testimonial-card">
+                        <p>"A Dra. Jéssica me ajudou a ver as coisas de uma perspectiva diferente e a encontrar a força que eu não sabia que tinha. Recomendo muito!"</p>
+                        <p>- J.S. - Maio/2024</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Um espaço de escuta e acolhimento. As sessões me proporcionaram um autoconhecimento profundo e muita clareza."</p>
+                        <p>- M.A. - Abril/2024</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Gratidão por cada sessão! Sinto que evoluí muito e agora tenho ferramentas para lidar melhor com os desafios. Profissional excelente."</p>
+                        <p>- P.R. - Março/2024</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Eu me sentia perdido e sobrecarregado, mas a terapia com a Jéssica me trouxe a clareza e a leveza que eu precisava. Um investimento na minha saúde mental."</p>
+                        <p>- L.F. - Fevereiro/2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        /* --- Seção Hero (Topo da página) --- */
-        .hero-section {
-            background-color: #f0f4f7; /* Fundo claro para a seção */
-            color: #2c3e50; /* Cor do texto para contraste */
-            text-align: center; /* Centraliza o texto */
-            padding: 120px 20px 100px; /* Espaçamento interno (top, right/left, bottom) */
-            margin-top: 80px; /* Margem superior para o conteúdo não ficar sob o header fixo */
-            position: relative; /* Para posicionamento de elementos internos, se necessário */
-        }
-        
-        .hero-section h1 {
-            font-size: 3.2em; /* Tamanho grande para o título principal */
-            color: #2c3e50; /* Cor do texto */
-            max-width: 900px; /* Largura máxima para o título */
-            line-height: 1.2; /* Espaçamento entre linhas */
-            margin: 0 auto 25px auto; /* Centraliza e adiciona margem inferior */
-            font-weight: 800;
-        }
+        <hr class="section-divider" aria-hidden="true">
 
-        .hero-section p {
-            font-size: 1.3em; /* Tamanho do parágrafo */
-            color: #555; /* Cor um pouco mais clara para o parágrafo */
-            max-width: 800px; /* Largura máxima para o parágrafo */
-            margin: 0 auto 40px auto; /* Centraliza e adiciona margem inferior */
-        }
-        
-        .cta-button { /* Botão principal de Call-to-Action */
-            display: inline-block; /* Permite espaçamento e alinhamento */
-            background-color: #4caf50; /* Cor de destaque (Verde) */
-            color: #fff !important; /* Cor do texto */
-            padding: 16px 40px; /* Espaçamento interno */
-            text-decoration: none; /* Remove sublinhado */
-            font-weight: 700; /* Peso da fonte */
-            border-radius: 50px; /* Cantos muito arredondados (pílula) */
-            font-size: 1.15em; /* Tamanho da fonte */
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transições suaves */
-            box-shadow: 0 5px 20px rgba(76, 175, 80, 0.4); /* Sombra para o botão */
-        }
+        <section id="faq" class="section light-bg">
+            <div class="container">
+                <h2>Perguntas Frequentes (FAQ)</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            O que é a Terapia Cognitivo-Comportamental (TCC)? <span class="icon fas fa-chevron-down"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>A TCC é uma abordagem terapêutica focada em identificar e modificar padrões de pensamento e comportamento disfuncionais. Ela ensina estratégias práticas para lidar com problemas e desenvolver novas formas de reagir a situações.</p>
+                        </div>
+                    </div>
 
-        .cta-button:hover {
-            background-color: #388e3c; /* Cor mais escura ao passar o mouse */
-            transform: translateY(-3px); /* Efeito de levantamento mais pronunciado */
-            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.5); /* Sombra mais intensa */
-        }
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            A terapia online é tão eficaz quanto a presencial? <span class="icon fas fa-chevron-down"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim, diversas pesquisas demonstram que a terapia online pode ser tão eficaz quanto a presencial. A eficácia depende da conexão terapêutica e do engajamento do paciente. Oferece flexibilidade, comodidade e sigilo.</p>
+                        </div>
+                    </div>
 
-        /* --- Seções de Conteúdo Padrão --- */
-        .section {
-            padding: 80px 0; /* Espaçamento vertical padrão para todas as seções */
-            text-align: center; /* Centraliza o conteúdo dentro da seção */
-        }
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Qual a duração e a frequência das sessões? <span class="icon fas fa-chevron-down"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>As sessões geralmente duram 50 minutos e a frequência usual é semanal, especialmente no início do tratamento. A duração total da terapia varia de acordo com as necessidades e objetivos de cada paciente.</p>
+                        </div>
+                    </div>
 
-        .section.light-bg { /* Fundo claro alternativo para algumas seções */
-            background-color: #f0f4f7; /* Cor mais clara que o fundo geral */
-        }
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Posso usar convênio ou plano de saúde? <span class="icon fas fa-chevron-down"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Não trabalho diretamente com convênios. No entanto, emito recibo para reembolso. Verifique com seu plano de saúde as condições e valores de reembolso para sessões de psicologia.</p>
+                        </div>
+                    </div>
 
-        .section h2 {
-            font-size: 2.6em; /* Tamanho dos títulos de seção */
-            margin-bottom: 40px; /* Margem inferior padrão para títulos de seção */
-            font-weight: 700;
-            color: #2c3e50;
-        }
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            O que devo fazer antes da primeira sessão? <span class="icon fas fa-chevron-down"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Para a primeira sessão, procure um local tranquilo e privado onde não será interrompido(a). Certifique-se de que sua conexão de internet está estável e que seus dispositivos (computador/celular) estão carregados. Estarei esperando você!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        /* --- Seção Sobre (com 2 colunas: texto e imagem) --- */
-        .about-content {
-            display: flex; /* Usa flexbox para organizar texto e imagem */
-            flex-wrap: wrap; /* Permite quebrar em telas menores (colunas se tornam linhas) */
-            align-items: center; /* Alinha itens verticalmente ao centro */
-            gap: 60px; /* Espaçamento entre as colunas */
-            text-align: left; /* Alinha o texto dentro da seção */
-        }
+        <hr class="section-divider" aria-hidden="true">
 
-        .about-image, .about-text {
-            flex: 1; /* Faz com que as colunas ocupem espaço igualmente */
-            min-width: 300px; /* Garante que as colunas não fiquem muito pequenas em telas médias */
-        }
+        <section id="contato" class="section">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p style="max-width: 600px; margin: 0 auto 30px auto; color: #555;">Estou aqui para te ouvir. Agende uma conversa para tirar suas dúvidas e dar o primeiro passo em direção ao seu bem-estar.</p>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Informações de Contato</h3>
+                        <p><i class="fas fa-whatsapp"></i> WhatsApp: (83) 98630-9163</p>
+                        <p><i class="fas fa-envelope"></i> E-mail: psicologa.jessicasoares@email.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Endereço: Consultório em Miramar, João Pessoa - PB</p>
+                        <p><i class="fas fa-phone"></i> Telefone: (83) 98630-9163</p>
+                        
+                        <h3 style="margin-top: 30px;">Horário de Atendimento</h3>
+                        <p><i class="far fa-clock"></i> Segunda a Sexta: 09:00 - 18:00</p>
+                        <p><i class="far fa-clock"></i> Sábados: 09:00 - 12:00 (apenas online)</p>
+                    </div>
+                    <div class="contact-form-container">
+                        <h3>Envie uma Mensagem</h3>
+                        <form action="YOUR_FORMSPREE_OR_BACKEND_ENDPOINT" method="POST">
+                            <label for="name">Nome Completo:</label>
+                            <input type="text" id="name" name="name" required>
 
-        .about-image img {
-            max-width: 100%; /* Imagem se ajusta à largura do container */
-            height: auto; /* Mantém proporção da imagem */
-            border-radius: 12px; /* Cantos arredondados */
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra para destaque */
-            display: block; /* Remove espaço extra abaixo da imagem */
-            margin: 0 auto; /* Centraliza a imagem se o container for menor */
-        }
+                            <label for="email">Seu E-mail:</label>
+                            <input type="email" id="email" name="email" required>
 
-        .about-text p {
-            font-size: 1.1em;
-            color: #555;
-            margin-bottom: 1.5em;
-        }
+                            <label for="phone">Telefone (opcional):</label>
+                            <input type="text" id="phone" name="phone">
 
-        /* --- Seção de Cards de Serviço/Atendimento --- */
-        .services-grid {
-            display: grid; /* Usa CSS Grid para layout de cards */
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas adaptáveis, com largura mínima de 280px */
-            gap: 30px; /* Espaçamento entre os cards */
-            text-align: left; /* Alinha o texto dentro dos cards */
-            margin-top: 50px; /* Margem superior para a grade de cards */
-        }
+                            <label for="message">Sua Mensagem:</label>
+                            <textarea id="message" name="message" required></textarea>
 
-        .service-card {
-            background-color: #fff; /* Fundo branco para os cards */
-            padding: 35px; /* Espaçamento interno */
-            border-radius: 10px; /* Cantos arredondados */
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Sombra para destaque */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves ao interagir */
-            height: 100%; /* Garante que todos os cards tenham a mesma altura em uma linha */
-            display: flex; /* Usa flexbox para organizar o conteúdo interno */
-            flex-direction: column; /* Conteúdo em coluna (ícone, título, parágrafo) */
-            justify-content: flex-start; /* Alinha o conteúdo ao topo */
-            align-items: flex-start; /* Alinha o conteúdo à esquerda */
-        }
+                            <button type="submit">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="google-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.0494002621425!2d-34.86470008593574!3d-7.12658827181313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ac1f2b6a7d5b1b%3A0x8f7d9a8f2e7c3b9b!2sMiramar%2C%20Jo%C3%A3o%20Pessoa%20-%20PB!5e0!3m2!1spt-BR!2sbr!4v1678901234567!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
 
-        .service-card:hover {
-            transform: translateY(-7px); /* Efeito de levantamento ao passar o mouse */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); /* Sombra mais intensa no hover */
-        }
+    </main> <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p><strong>Jéssica S. Barbosa</strong> | Psicóloga Clínica</p>
+                <p>CRP: 13/10484 | Consultório em Miramar, João Pessoa - PB</p>
+                <p>E-mail: psicologa.jessicasoares@email.com | Tel/WhatsApp: (83) 98630-9163</p>
+                <p>&copy; 2025 Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/psicologia.jessicasoares" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Psicóloga Jéssica S. Barbosa"><i class="fab fa-instagram"></i></a>
+                </div>
+        </div>
+    </footer>
 
-        .service-card i { /* Estilos para os ícones dentro dos cards */
-            font-size: 3em; /* Tamanho grande para os ícones */
-            color: #4caf50; /* Cor de destaque para os ícones */
-            margin-bottom: 20px; /* Margem inferior */
-            display: block; /* Garante que o ícone fique em sua própria linha */
-        }
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
 
-        .service-card h3 {
-            font-size: 1.5em; /* Tamanho do título do card */
-            margin-bottom: 12px; /* Margem inferior */
-            color: #2c3e50; /* Cor do título */
-            font-weight: 600;
-        }
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.closest('.faq-item');
+                    faqItem.classList.toggle('active');
+                    const answer = faqItem.querySelector('.faq-answer');
+                    if (faqItem.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + "px"; // Ajusta a altura com base no conteúdo
+                        answer.style.paddingTop = "20px";
+                        answer.style.paddingBottom = "20px";
+                    } else {
+                        answer.style.maxHeight = null;
+                        answer.style.paddingTop = "0";
+                        answer.style.paddingBottom = "0";
+                    }
+                });
+            });
+        });
+    </script>
 
-        .service-card p {
-            font-size: 1em; /* Tamanho do texto do card */
-            color: #666; /* Cor do texto */
-            flex-grow: 1; /* Faz o parágrafo ocupar o espaço restante, mantendo a altura do card */
-        }
-
-        /* --- Seção de Depoimentos --- */
-        .testimonials-container {
-            display: flex; /* Usa flexbox para os cards de depoimento */
-            flex-wrap: wrap; /* Permite quebrar em várias linhas */
-            justify-content: center; /* Centraliza os cards */
-            gap: 30px; /* Espaçamento entre os cards */
-        }
-
-        .testimonial-card {
-            background-color: #fff; /* Fundo branco */
-            padding: 30px; /* Espaçamento interno */
-            border-radius: 10px; /* Cantos arredondados */
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); /* Sombra */
-            max-width: 380px; /* Largura máxima do card */
-            text-align: left; /* Alinha o texto à esquerda dentro do card */
-            flex-basis: calc(33.333% - 20px); /* Tenta 3 colunas, ajusta para gap */
-            flex-grow: 1; /* Permite que os cards cresçam para preencher espaço */
-            flex-shrink: 1; /* Permite que os cards encolham */
-            min-width: 280px; /* Largura mínima para o card não ficar muito pequeno */
-        }
-
-        .testimonial-card p:first-of-type { /* O texto do depoimento */
-            font-style: italic; /* Itálico */
-            font-size: 1.1em; /* Tamanho da fonte */
-            color: #555; /* Cor do texto */
-            margin-bottom: 15px; /* Margem inferior */
-            position: relative;
-            padding-left: 20px; /* Espaço para aspas */
-        }
-
-        .testimonial-card p:first-of-type::before {
-            content: "\201C"; /* Aspas de abertura */
-            font-size: 3em;
-            color: #4caf50;
-            position: absolute;
-            left: 0;
-            top: -10px;
-            opacity: 0.5;
-        }
-
-        .testimonial-card p:last-child { /* O nome do paciente */
-            font-weight: 700; /* Mais peso para o nome */
-            margin-top: 0;
-            text-align: right; /* Alinha o nome à direita */
-            font-style: normal; /* Remove itálico do nome */
-            color: #333;
-        }
-
-        /* --- Seção de Perguntas Frequentes (FAQ) --- */
-        .faq-container {
-            max-width: 800px; /* Largura máxima para a seção FAQ */
-            margin: 0 auto; /* Centraliza */
-            text-align: left; /* Alinha o texto à esquerda */
-        }
-
-        .faq-item {
-            background-color: #fff;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-            overflow: hidden; /* Garante que o conteúdo não vaze */
-        }
-
-        .faq-question {
-            padding: 20px 25px;
-            background-color: #fff;
-            color: #2c3e50;
-            font-weight: 600;
-            font-size: 1.1em;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #eee; /* Linha sutil para separar */
-            transition: background-color 0.3s ease;
-        }
-
-        .faq-question:hover {
-            background-color: #f5f5f5;
-        }
-
-        .faq-question .icon {
-            font-size: 1em;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-answer {
-            padding: 0 25px; /* Padding horizontal */
-            max-height
+</body>
+</html>
