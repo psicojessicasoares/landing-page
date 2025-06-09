@@ -124,13 +124,38 @@
         }
 
     </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16890450366"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'AW-16890450366');
+    </script>
+    
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16890450366/EmO4CMTxx9YaEL6j__U-',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+
 </head>
 <body>
 
     <header class="hero">
         <h1>Eu sei que buscar ajuda é o passo mais corajoso.</h1>
         <p class="subtitle">Meu nome é Jéssica S. Barbosa e meu consultório em João Pessoa é um espaço seguro e sigiloso para você ser ouvido(a) e encontrar clareza.</p>
-        <a href="https://wa.me/5583986309163" class="cta-button" target="_blank">Agende uma Conversa Inicial</a>
+        <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5583986309163');">Agende uma Conversa Inicial</a>
     </header>
 
     <div class="social-proof-bar">
@@ -159,7 +184,7 @@
         <div class="container">
             <h2>Vamos Conversar?</h2>
             <p class="main-text" style="text-align: center;">O primeiro passo não precisa ser um grande salto. Pode ser uma conversa para tirar suas dúvidas e para você entender como a terapia pode funcionar no seu caso. Estou aqui para te ouvir.</p>
-            <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" style="margin-top: 25px;">Fale Comigo no WhatsApp</a>
+            <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" style="margin-top: 25px;" onclick="return gtag_report_conversion('https://wa.me/5583986309163');">Fale Comigo no WhatsApp</a>
         </div>
     </section>
 
