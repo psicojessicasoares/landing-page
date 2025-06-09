@@ -66,7 +66,7 @@
             padding: 0 20px; /* Espaçamento lateral */
         }
 
-        /* --- NOVO: Header e Navegação Fixa --- */
+        /* --- Header e Navegação Fixa --- */
         .main-header {
             background-color: #fff;
             padding: 15px 0;
@@ -122,10 +122,10 @@
             background-color: #388e3c;
         }
 
-        /* --- NOVO: Seção Hero (Topo) --- */
+        /* --- Seção Hero (Topo) --- */
         .hero-section {
-            /* MUDAR: URL da sua imagem de fundo para a seção do topo (HERO) */
-            background: url('https://via.placeholder.com/1500x700?text=SUA+IMAGEM+DE+FUNDO+AQUI') no-repeat center center/cover; 
+            /* URL da sua imagem de fundo para a seção do topo (HERO) */
+            background: url('https://github.com/psicojessicasoares/landing-page/raw/main/Captura%20de%20tela%202025-06-09%20131856.png') no-repeat center center/cover; 
             color: #fff;
             text-align: center;
             padding: 150px 20px 100px; /* Espaçamento interno (ajuste conforme necessário) */
@@ -181,7 +181,7 @@
             transform: translateY(-2px);
         }
 
-        /* --- NOVO: Seções de Conteúdo Padrão --- */
+        /* --- Seções de Conteúdo Padrão --- */
         .section {
             padding: 80px 0; /* Espaçamento vertical para todas as seções */
             text-align: center;
@@ -196,7 +196,7 @@
             margin-bottom: 40px;
         }
 
-        /* --- NOVO: Seção Sobre (com 2 colunas) --- */
+        /* --- Seção Sobre (com 2 colunas) --- */
         .about-content {
             display: flex;
             flex-wrap: wrap; /* Permite quebrar em telas menores */
@@ -217,7 +217,7 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* --- NOVO: Seção de Atendimento (Cards) --- */
+        /* --- Seção de Atendimento (Cards) --- */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas adaptáveis */
@@ -256,7 +256,7 @@
             color: #666;
         }
 
-        /* --- NOVO: Rodapé --- */
+        /* --- Rodapé --- */
         .main-footer {
             background-color: #2c3e50; /* Cor escura do rodapé */
             color: #ecf0f1;
@@ -268,179 +268,4 @@
         .footer-content {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .footer-info, .footer-social {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .footer-social a {
-            color: #fff;
-            font-size: 1.5em;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-social a:hover {
-            color: #4caf50; /* Cor de destaque ao passar o mouse */
-        }
-
-        /* --- NOVO: Responsividade (para telas menores) --- */
-        @media (max-width: 768px) {
-            .main-header .container {
-                flex-direction: column; /* Menu vertical */
-                gap: 15px;
-            }
-            .main-nav ul {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-            }
-            .btn-whats-nav {
-                margin-left: 0;
-            }
-
-            .hero-section h1 {
-                font-size: 2em;
-            }
-            .hero-section p {
-                font-size: 1em;
-            }
-
-            .about-content {
-                flex-direction: column; /* Colunas empilham */
-                text-align: center;
-            }
-            .about-image {
-                order: -1; /* Imagem acima do texto no mobile */
-            }
-
-            .section {
-                padding: 60px 0;
-            }
-            .section h2 {
-                font-size: 1.8em;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr; /* Uma coluna no mobile */
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">Jéssica S. Barbosa</div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#hero">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#atendimento">Atendimento</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><a href="https://wa.me/5583986309163" class="btn-whats-nav" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5583986309163');"><i class="fab fa-whatsapp"></i> Agende Online</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="hero" class="hero-section">
-        <div class="hero-overlay">
-            <div class="container">
-                <h1>Sua Jornada para o Bem-Estar Começa Aqui.</h1>
-                <p>Um espaço seguro e acolhedor para você encontrar clareza, superar desafios e florescer.</p>
-                <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5583986309163');">Agende sua Primeira Conversa</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="sobre" class="section light-bg">
-        <div class="container">
-            <h2>Sobre Mim</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Meu nome é Jéssica S. Barbosa, psicóloga clínica com CRP: 13/10484. Acredito que o caminho para o autoconhecimento e o bem-estar é único para cada um, e estou aqui para guiar você nesse processo com acolhimento e profissionalismo.</p>
-                    <p>Atuo com base na Terapia Cognitivo-Comportamental (TCC), uma abordagem focada em resultados práticos que nos permite entender seus padrões de pensamento e comportamento e desenvolver novas formas de lidar com os desafios da vida.</p>
-                    <p>Minha missão é oferecer um ambiente de escuta ativa e sigilo, onde você se sinta seguro(a) para explorar seus sentimentos e construir um caminho mais leve e equilibrado.</p>
-                </div>
-                <div class="about-image">
-                    <img src="https://via.placeholder.com/400x500?text=SUA+FOTO+AQUI" alt="Jéssica S. Barbosa - Psicóloga">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="atendimento" class="section">
-        <div class="container">
-            <h2>Como Posso Ajudar</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-hand-holding-heart"></i>
-                    <h3>Acompanhamento Terapêutico</h3>
-                    <p>Sessões individuais focadas nas suas necessidades, para lidar com ansiedade, estresse, depressão e outros desafios emocionais.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>Autoconhecimento e Desenvolvimento</h3>
-                    <p>Explore seus sentimentos, pensamentos e padrões de comportamento para promover seu crescimento pessoal e emocional.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-comments"></i>
-                    <h3>Melhora nos Relacionamentos</h3>
-                    <p>Desenvolva habilidades de comunicação e entenda a dinâmica dos seus relacionamentos para interações mais saudáveis.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>Estratégias para Lidar com Desafios</h3>
-                    <p>Aprenda técnicas e estratégias práticas para gerenciar situações difíceis e construir resiliência no dia a dia.</p>
-                </div>
-                </div>
-        </div>
-    </section>
-
-    <section id="depoimentos" class="section light-bg">
-        <div class="container">
-            <h2>O Que Dizem Meus Pacientes</h2>
-            <div class="testimonials-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; text-align: center;">
-                <div class="testimonial-card" style="background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); max-width: 350px;">
-                    <p style="font-style: italic; font-size: 1.1em; color: #555;">"A Dra. Jéssica me ajudou a ver as coisas de uma perspectiva diferente e a encontrar a força que eu não sabia que tinha. Recomendo muito!"</p>
-                    <p style="font-weight: 600; margin-top: 15px;">- Paciente A</p>
-                </div>
-                <div class="testimonial-card" style="background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); max-width: 350px;">
-                    <p style="font-style: italic; font-size: 1.1em; color: #555;">"Um espaço de escuta e acolhimento. As sessões me proporcionaram um autoconhecimento profundo e muita clareza."</p>
-                    <p style="font-weight: 600; margin-top: 15px;">- Paciente B</p>
-                </div>
-                </div>
-        </div>
-    </section>
-
-    <section id="contato" class="section">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <p style="max-width: 600px; margin: 0 auto 30px auto; color: #555;">Estou aqui para te ouvir. Agende uma conversa para tirar suas dúvidas e dar o primeiro passo em direção ao seu bem-estar.</p>
-            <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5583986309163');"><i class="fab fa-whatsapp"></i> Fale Comigo no WhatsApp</a>
-            <p style="margin-top: 20px; font-size: 1.1em; color: #555;"></p>
-            <p style="font-size: 1.1em; color: #555;">Endereço: Consultório em Miramar, João Pessoa - PB</p>
-            </div>
-    </section>
-
-    <footer class="main-footer">
-        <div class="container footer-content">
-            <div class="footer-info">
-                <p><strong>Jéssica S. Barbosa</strong> | Psicóloga Clínica</p>
-                <p>CRP: 13/10484 | Consultório em Miramar, João Pessoa - PB</p>
-                <p>&copy; 2025 Todos os direitos reservados.</p>
-            </div>
-            <div class="footer-social">
-                <a href="https://www.instagram.com/psicologia.jessicasoares" target="_blank"><i class="fab fa-instagram"></i></a>
-                </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+            justify-content
