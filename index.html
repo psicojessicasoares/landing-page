@@ -16,11 +16,11 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
+
       gtag('config', 'AW-16890450366'); // Configuração para Google Ads
       gtag('config', 'G-7SSF4QG6QD');    // NOVA CONFIGURAÇÃO PARA GOOGLE ANALYTICS 4
     </script>
-    
+
     <script>
     function gtag_report_conversion(url) {
       var callback = function () {
@@ -56,3 +56,482 @@
         }
 
         a {
+            text-decoration: none;
+            color: inherit; /* Links herdam a cor do pai por padrão */
+        }
+
+        .container {
+            max-width: 1100px; /* Largura máxima do conteúdo */
+            margin: 0 auto;
+            padding: 0 20px; /* Espaçamento lateral */
+        }
+
+        /* --- Header e Navegação Fixa --- */
+        .main-header {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            position: fixed; /* Fixa o header no topo */
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Garante que fique acima de outros elementos */
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #4caf50; /* Cor de destaque para o logo */
+        }
+
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px; /* Espaçamento entre os itens do menu */
+        }
+
+        .main-nav a {
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            color: #4caf50; /* Cor de destaque ao passar o mouse */
+        }
+
+        .btn-whats-nav { /* Botão de WhatsApp no menu */
+            background-color: #4caf50; /* Cor de destaque */
+            color: #fff !important;
+            padding: 8px 18px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            margin-left: 20px; /* Espaçamento do menu */
+        }
+
+        .btn-whats-nav:hover {
+            background-color: #388e3c;
+        }
+
+        /* --- Seção Hero (Topo) - SEM IMAGEM DE FUNDO --- */
+        .hero-section {
+            background-color: #f0f4f7; /* Fundo claro, sem imagem */
+            color: #2c3e50; /* Texto escuro para contraste */
+            text-align: center;
+            padding-top: 120px; /* Espaçamento interno superior, ajustado para não ficar sob o header */
+            padding-bottom: 100px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: 80px; /* Espaço para o header fixo */
+            position: relative;
+        }
+
+        .hero-section h1 {
+            font-size: 2.8em;
+            color: #2c3e50; /* Texto escuro */
+            max-width: 800px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            margin-left: auto; /* Centraliza o h1 */
+            margin-right: auto; /* Centraliza o h1 */
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            color: #555; /* Texto um pouco mais claro */
+            max-width: 700px;
+            margin-bottom: 30px;
+            margin-left: auto; /* Centraliza o p */
+            margin-right: auto; /* Centraliza o p */
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #4caf50; /* Cor de destaque */
+            color: #fff !important;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 50px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+        }
+
+        .cta-button:hover {
+            background-color: #388e3c;
+            transform: translateY(-2px);
+        }
+
+        /* --- Seções de Conteúdo Padrão --- */
+        .section {
+            padding: 80px 0; /* Espaçamento vertical para todas as seções */
+            text-align: center;
+        }
+
+        .section.light-bg { /* Fundo claro para algumas seções */
+            background-color: #f0f4f7; /* Cor mais clara que o fundo geral */
+        }
+
+        .section h2 {
+            font-size: 2.2em;
+            margin-bottom: 40px;
+        }
+
+        /* --- Seção Sobre (com 2 colunas) --- */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap; /* Permite quebrar em telas menores */
+            align-items: center;
+            gap: 40px; /* Espaçamento entre as colunas */
+            text-align: left;
+        }
+
+        .about-image, .about-text {
+            flex: 1; /* Faz com que as colunas ocupem espaço igualmente */
+            min-width: 300px; /* Garante que não fiquem muito pequenas */
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; /* Cantos arredondados */
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- Seção de Atendimento (Cards) --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas adaptáveis */
+            gap: 30px; /* Espaçamento entre os cards */
+            text-align: left;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px); /* Efeito suave ao passar o mouse */
+        }
+
+        .service-card i { /* Ícones dos serviços */
+            font-size: 2.5em;
+            color: #4caf50;
+            margin-bottom: 20px;
+            display: block; /* Para o ícone ficar em sua própria linha */
+        }
+
+        .service-card h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .service-card p {
+            font-size: 0.95em;
+            color: #666;
+        }
+
+        /* --- Seção de Depoimentos --- */
+        .testimonials-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            /* text-align: center; REMOVIDO: o justify-content já centraliza os cards, e o texto dentro deles é left-aligned */
+        }
+
+        .testimonial-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            max-width: 350px;
+            text-align: left; /* Alinha o texto dentro do card à esquerda */
+            flex-shrink: 0; /* Evita que o card encolha mais do que o necessário */
+            flex-grow: 0; /* Evita que o card cresça para preencher o espaço */
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card p:last-child { /* Para o nome do paciente */
+            font-weight: 600;
+            margin-top: 0;
+            text-align: right; /* Alinha o nome do paciente à direita */
+            font-style: normal; /* Remove itálico do nome */
+            color: #333;
+        }
+
+        /* --- Rodapé --- */
+        .main-footer {
+            background-color: #2c3e50; /* Cor escura do rodapé */
+            color: #ecf0f1;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-info, .footer-social {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-social a {
+            color: #fff;
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: #4caf50; /* Cor de destaque ao passar o mouse */
+        }
+
+        /* --- Estilo para as linhas divisórias --- */
+        .section-divider {
+            border: 0;
+            height: 1px;
+            background-color: #eee;
+            margin: 0; /* Você pode ajustar isso para dar mais ou menos espaço entre seções */
+        }
+
+        /* --- Responsividade (para telas menores) --- */
+        @media (max-width: 768px) {
+            /* Ajustes gerais de espaçamento para mobile */
+            .section {
+                padding: 40px 15px; /* Reduz padding lateral e ajusta vertical */
+            }
+
+            .section h2 {
+                font-size: 1.8em;
+                margin-bottom: 30px; /* Reduz margem de título */
+            }
+
+            .container {
+                padding: 0 15px; /* Ajusta padding do container em mobile */
+            }
+
+            /* Header em mobile */
+            .main-header .container {
+                flex-direction: column; /* Menu vertical */
+                gap: 10px; /* Reduz espaçamento */
+                padding: 10px 15px; /* Ajusta padding do header */
+                align-items: center; /* Adicionado para centralizar logo e navegação */
+            }
+            .main-nav { /* Adicionado para garantir o alinhamento */
+                width: 100%;
+                text-align: center;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                align-items: center; /* Já centraliza os itens da lista */
+                gap: 8px; /* Reduz espaçamento */
+                margin: 0 auto; /* Centraliza a lista de navegação */
+            }
+            .btn-whats-nav {
+                margin-left: 0;
+                margin-top: 10px; /* Adiciona margem acima do botão */
+            }
+
+            /* Hero Section em mobile */
+            .hero-section {
+                padding-top: 160px; /* MAIS ESPAÇO AQUI: Aumentado para 160px para o conteúdo não ficar por baixo do header fixo em mobile */
+                padding-bottom: 60px; /* Ajusta padding */
+                margin-top: 0; /* Remove margin-top em mobile, já que o padding-top já cuida do espaço */
+            }
+            .hero-section h1 {
+                font-size: 2em; /* Reduz tamanho da fonte do título */
+            }
+            .hero-section p {
+                font-size: 1em; /* Reduz tamanho da fonte do parágrafo */
+            }
+
+            /* Seção Sobre em mobile */
+            .about-content {
+                flex-direction: column; /* Colunas empilham */
+                text-align: center;
+                gap: 30px; /* Reduz espaçamento */
+            }
+            .about-image {
+                order: -1; /* Imagem acima do texto no mobile */
+                min-width: auto; /* Remove min-width para flexibilidade */
+                max-width: 80%; /* Garante que a imagem não seja muito grande */
+                margin: 0 auto; /* Centraliza a imagem */
+            }
+            .about-image img {
+                border-radius: 50%; /* Faz a imagem da seção "Sobre" redonda */
+                width: 180px; /* Tamanho fixo para foto de perfil */
+                height: 180px; /* Torna a imagem quadrada antes do border-radius */
+                object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+            }
+            .about-text {
+                min-width: auto; /* Remove min-width */
+            }
+
+            /* Cards de Serviço em mobile */
+            .services-grid {
+                grid-template-columns: 1fr; /* Uma coluna no mobile */
+                gap: 20px; /* Reduz espaçamento */
+            }
+            .service-card {
+                padding: 25px; /* Reduz padding */
+            }
+
+            /* Rodapé em mobile */
+            .footer-content {
+                flex-direction: column; /* Conteúdo do rodapé empilha */
+                gap: 15px; /* Reduz espaçamento */
+            }
+            .footer-info, .footer-social {
+                min-width: auto; /* Remove min-width */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">Jéssica S. Barbosa</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#atendimento">Atendimento</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="https://wa.me/5583986309163" class="btn-whats-nav" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5583986309163');"><i class="fab fa-whatsapp"></i> Agende Online</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <h1>Sua Jornada para o Bem-Estar Começa Aqui.</h1>
+            <p>Um espaço seguro e acolhedor para você encontrar clareza, superar desafios e florescer.</p>
+            <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5583986309163');">Agende sua Primeira Conversa</a>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="sobre" class="section light-bg">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Meu nome é Jéssica S. Barbosa, psicóloga clínica com CRP: 13/10484. Acredito que o caminho para o autoconhecimento e o bem-estar é único para cada um, e estou aqui para guiar você nesse processo com acolhimento e profissionalismo.</p>
+                    <p>Atuo com base na Terapia Cognitivo-Comportamental (TCC), uma abordagem focada em resultados práticos que nos permite entender seus padrões de pensamento e comportamento e desenvolver novas formas de lidar com os desafios da vida.</p>
+                    <p>Minha missão é oferecer um ambiente de escuta ativa e sigilo, onde você se sinta seguro(a) para explorar seus sentimentos e construir um caminho mais leve e equilibrado.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://raw.githubusercontent.com/psicojessicasoares/landing-page/main/Captura%20de%20tela%202025-06-09%20131856%20(1).png" alt="Jéssica S. Barbosa - Psicóloga">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="atendimento" class="section">
+        <div class="container">
+            <h2>Como Posso Ajudar</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Acompanhamento Terapêutico</h3>
+                    <p>Sessões individuais focadas nas suas necessidades, para lidar com ansiedade, estresse, depressão e outros desafios emocionais.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Autoconhecimento e Desenvolvimento</h3>
+                    <p>Explore seus sentimentos, pensamentos e padrões de comportamento para promover seu crescimento pessoal e emocional.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Melhora nos Relacionamentos</h3>
+                    <p>Desenvolva habilidades de comunicação e entenda a dinâmica dos seus relacionamentos para interações mais saudáveis.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Estratégias para Lidar com Desafios</h3>
+                    <p>Aprenda técnicas e estratégias práticas para gerenciar situações difíceis e construir resiliência no dia a dia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="depoimentos" class="section light-bg">
+        <div class="container">
+            <h2>O Que Dizem Meus Pacientes</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <p>"A Dra. Jéssica me ajudou a ver as coisas de uma perspectiva diferente e a encontrar a força que eu não sabia que tinha. Recomendo muito!"</p>
+                    <p>- J.S. - Maio/2024</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Um espaço de escuta e acolhimento. As sessões me proporcionaram um autoconhecimento profundo e muita clareza."</p>
+                    <p>- M.A. - Abril/2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="contato" class="section">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px auto; color: #555;">Estou aqui para te ouvir. Agende uma conversa para tirar suas dúvidas e dar o primeiro passo em direção ao seu bem-estar.</p>
+            <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5583986309163');"><i class="fab fa-whatsapp"></i> Fale Comigo no WhatsApp</a>
+            <p style="margin-top: 20px; font-size: 1.1em; color: #555;">Ou envie um e-mail para: psicologa.jessicasoares@email.com</p>
+            <p style="font-size: 1.1em; color: #555;">Endereço: Consultório em Miramar, João Pessoa - PB</p>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p><strong>Jéssica S. Barbosa</strong> | Psicóloga Clínica</p>
+                <p>CRP: 13/10484 | Consultório em Miramar, João Pessoa - PB</p>
+                <p>&copy; 2025 Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/psicologia.jessicasoares" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+        </div>
+    </footer>
+
+</body>
+</html>
