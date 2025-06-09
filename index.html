@@ -191,46 +191,4 @@
         /* --- Seção Sobre (com 2 colunas) --- */
         .about-content {
             display: flex;
-            flex-wrap: wrap; /* Permite quebrar em telas menores */
-            align-items: center;
-            gap: 40px; /* Espaçamento entre as colunas */
-            text-align: left;
-        }
-
-        .about-image, .about-text {
-            flex: 1; /* Faz com que as colunas ocupem espaço igualmente */
-            min-width: 300px; /* Garante que não fiquem muito pequenas */
-        }
-
-        .about-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px; /* Cantos arredondados */
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        /* --- Seção de Atendimento (Cards) --- */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas adaptáveis */
-            gap: 30px; /* Espaçamento entre os cards */
-            text-align: left;
-            margin-top: 50px;
-        }
-
-        .service-card {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px); /* Efeito suave ao passar o mouse */
-        }
-
-        .service-card i { /* Ícones dos serviços */
-            font-size: 2.5em;
-            color: #4caf50;
-            margin-bottom
+            flex-wrap: wrap
