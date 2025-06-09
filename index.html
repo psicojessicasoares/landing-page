@@ -122,35 +122,20 @@
             background-color: #388e3c;
         }
 
-        /* --- Seção Hero (Topo) --- */
+        /* --- Seção Hero (Topo) - AGORA SEM IMAGEM DE FUNDO --- */
         .hero-section {
-            /* URL da sua imagem de fundo para a seção do topo (HERO) - CORRIGIDO */
-            background: url('https://github.com/psicojessicasoares/landing-page/raw/main/Captura%20de%20tela%202025-06-09%20131856.png') no-repeat center center/cover; 
-            color: #fff;
+            background-color: #f0f4f7; /* Fundo claro, sem imagem */
+            color: #2c3e50; /* Texto escuro para contraste */
             text-align: center;
-            padding: 150px 20px 100px; /* Espaçamento interno (ajuste conforme necessário) */
+            padding: 150px 20px 100px; /* Espaçamento interno */
             position: relative;
             margin-top: 70px; /* Espaço para o header fixo */
         }
-
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.4); /* Escurece a imagem para o texto se destacar */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box; /* Garante que padding não afete a largura/altura total */
-        }
+        /* REMOVEMOS O .hero-overlay CSS POIS NÃO TEM IMAGEM DE FUNDO */
 
         .hero-section h1 {
             font-size: 2.8em;
-            color: #fff;
+            color: #2c3e50; /* Texto escuro */
             max-width: 800px;
             line-height: 1.2;
             margin-bottom: 20px;
@@ -158,7 +143,7 @@
 
         .hero-section p {
             font-size: 1.2em;
-            color: #eee;
+            color: #555; /* Texto um pouco mais claro */
             max-width: 700px;
             margin-bottom: 30px;
         }
@@ -339,8 +324,8 @@
             <div class="logo">Jéssica S. Barbosa</div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#hero">Início</a></li> 
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li> 
                     <li><a href="#atendimento">Atendimento</a></li>
                     <li><a href="#contato">Contato</a></li>
                     <li><a href="https://wa.me/5583986309163" class="btn-whats-nav" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5583986309163');"><i class="fab fa-whatsapp"></i> Agende Online</a></li>
@@ -348,6 +333,14 @@
             </nav>
         </div>
     </header>
+
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <h1>Sua Jornada para o Bem-Estar Começa Aqui.</h1>
+            <p>Um espaço seguro e acolhedor para você encontrar clareza, superar desafios e florescer.</p>
+            <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5583986309163');">Agende sua Primeira Conversa</a>
+        </div>
+    </section>
 
     <section id="sobre" class="section light-bg">
         <div class="container">
@@ -361,16 +354,6 @@
                 <div class="about-image">
                     <img src="https://raw.githubusercontent.com/psicojessicasoares/landing-page/main/WhatsApp%20Image%202025-06-08%20at%2022.48.36.jpeg" alt="Jéssica S. Barbosa - Psicóloga">
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="hero" class="hero-section">
-        <div class="hero-overlay">
-            <div class="container">
-                <h1>Sua Jornada para o Bem-Estar Começa Aqui.</h1>
-                <p>Um espaço seguro e acolhedor para você encontrar clareza, superar desafios e florescer.</p>
-                <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5583986309163');">Agende sua Primeira Conversa</a>
             </div>
         </div>
     </section>
