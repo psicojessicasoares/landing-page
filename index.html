@@ -3,200 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psicóloga Clínica Jéssica Soares | João Pessoa e Online</title>
+    <title>Jéssica S. Barbosa | Psicóloga TCC em João Pessoa</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
         body {
-            font-family: 'Lato', sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fdfdfd;
+            color: #3a3a3a;
+            background-color: #f9f9f9;
+            line-height: 1.7;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
-        header {
+
+        .hero {
+            background-color: #fff;
             text-align: center;
-            padding: 60px 20px;
-            background-color: #f4f7f5;
+            padding: 50px 20px;
         }
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8em;
+
+        .hero h1 {
+            font-size: 2.2em;
             color: #2c3e50;
-            margin: 0;
+            font-weight: 700;
+            line-height: 1.3;
         }
-        header h2 {
-            font-family: 'Lato', sans-serif;
-            font-weight: 400;
-            font-size: 1.2em;
-            color: #555;
-            margin-top: 10px;
-        }
-        section {
-            padding: 40px 20px;
-            border-bottom: 1px solid #eee;
-        }
-        section h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2em;
-            text-align: center;
-            color: #34495e;
-            margin-bottom: 40px;
-        }
-        p, li {
+
+        .hero p.subtitle {
             font-size: 1.1em;
             color: #555;
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        .benefits {
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-            flex-wrap: wrap;
-        }
-        .benefit-item {
-            flex-basis: 30%;
-            min-width: 200px;
-            padding: 10px;
-        }
-        .benefit-item h4 {
-            font-size: 1.2em;
-            color: #34495e;
-        }
-        blockquote {
-            font-style: italic;
-            border-left: 4px solid #8A9A5B; /* Verde-sálvia */
-            padding-left: 20px;
-            margin: 30px 0;
-        }
-        blockquote cite {
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-            font-style: normal;
-        }
-        .cta-section {
-            background-color: #8A9A5B; /* Verde-sálvia */
-            color: #fff;
-            text-align: center;
-        }
-        .cta-section h3 {
-            color: #fff;
-        }
-        .button {
+
+        .cta-button {
             display: inline-block;
-            padding: 15px 30px;
-            margin: 10px;
-            border-radius: 5px;
+            background-color: #27ae60;
+            color: #fff !important;
+            padding: 15px 35px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
+            border-radius: 50px;
             font-size: 1.1em;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: #229954;
+            transform: translateY(-2px);
+        }
+        
+        /* ESTILO DOS ÍCONES SOCIAIS NO TOPO */
+        .social-icons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .social-icons a {
+            color: #3a3a3a;
+            text-decoration: none;
             transition: transform 0.2s;
         }
-        .button:hover {
-            transform: scale(1.05);
+
+        .social-icons a:hover {
+            transform: scale(1.1);
         }
-        .whatsapp-button {
-            background-color: #25D366;
-            color: #fff;
+
+        .social-icons svg {
+            width: 32px;
+            height: 32px;
+            fill: #555;
         }
-        .instagram-button {
-            background-color: #E4405F;
-            color: #fff;
-        }
-        footer {
+        
+        .social-proof-bar {
             text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-            color: #777;
-            background-color: #f4f7f5;
+            padding: 15px 20px;
+            background-color: #eaf2f5;
+            font-weight: 500;
+            color: #2c3e50;
         }
-        footer a {
-            color: #555;
+        
+        .social-proof-bar a {
+            color: #2c3e50;
+            font-weight: 700;
+            text-decoration: none;
         }
+        
+        .social-proof-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .section.light-bg {
+            background-color: #fff;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; text-align: left; }
+        .benefit-item { background-color: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 5px 25px rgba(0,0,0,0.05); }
+        .benefit-item h3 { font-size: 1.2em; color: #27ae60; margin-top: 0; }
+        .testimonials { max-width: 700px; margin: 0 auto; }
+        .testimonial-quote { background-color: #fff; border-left: 5px solid #27ae60; padding: 20px; margin-bottom: 20px; font-style: italic; color: #555; text-align: left; border-radius: 0 8px 8px 0; }
+        .testimonial-quote footer { font-style: normal; font-weight: 700; color: #333; margin-top: 10px; }
+        
+        footer.main-footer {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        footer.main-footer a {
+            color: #fff;
+        }
+        
+        footer.main-footer .address-note {
+            font-size: 0.8em;
+            font-style: italic;
+            color: #ccc;
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
+
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Uma Vida com Mais Clareza e Paz Interior Começa Aqui</h1>
-        <h2>Por Psicóloga Clínica Jéssica Soares (CRP 13/10484)</h2>
+    <header class="hero">
+        <h1>Sente que a ansiedade e o estresse estão no controle?</h1>
+        <p class="subtitle">Em João Pessoa, ofereço uma psicoterapia focada em TCC para você retomar as rédeas da sua vida, com um atendimento que une acolhimento e técnica.</p>
+        <a href="https://wa.me/5583986309163" class="cta-button" target="_blank">Agende Sua Conversa Inicial</a>
+
+        <div class="social-icons">
+            <a href="https://wa.me/5583986309163" target="_blank" title="WhatsApp">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.8 0-67.6-9.5-97.2-27.2l-6.7-4-71.6 18.7 19.3-70.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+            </a>
+            <a href="https://instagram.com/SEU_PERFIL_AQUI" target="_blank" title="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9 26.3 26.2 58 34.4 93.9 36.2 37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            </a>
+        </div>
     </header>
 
-    <div class="container">
-        <section>
-            <p>Se você se sente sobrecarregado(a), ansioso(a) ou sente que algo precisa mudar, você não está só.</p>
-            <p>A vida moderna tem suas alegrias, mas também seus desafios. A pressão do dia a dia, as incertezas do futuro e as feridas do passado podem criar um peso difícil de carregar sem apoio. Talvez você sinta que está em um ciclo repetitivo, luta contra pensamentos que não te deixam em paz ou simplesmente sente que tem um potencial maior que não consegue acessar.</p>
-            <p>Saiba que sentir isso é o primeiro sinal de que a mudança é possível. E você não precisa construir esse novo caminho em silêncio.</p>
-        </section>
-
-        <section>
-            <h3>Meu nome é Jéssica Soares, e minha missão é ser sua parceira nesta jornada.</h3>
-            <p>Como <strong>Psicóloga Clínica em João Pessoa (CRP 13/10484)</strong>, eu desenvolvi um espaço de atendimento pautado na segurança e na transformação. Com uma trajetória profissional dedicada à psicologia clínica e à ciência do comportamento humano, minha abordagem une o que há de mais eficaz na Terapia Cognitivo-Comportamental (TCC) com um pilar inegociável: o <strong>acolhimento humano</strong>.</p>
-            <p>Acredito que a terapia de excelência acontece quando a técnica encontra a confiança, a empatia e um ambiente onde você se sente verdadeiramente visto(a) e compreendido(a).</p>
-        </section>
-
-        <section class="benefits-section">
-            <h3>O que você pode esperar desta jornada terapêutica?</h3>
-            <div class="benefits">
-                <div class="benefit-item">
-                    <h4>Mais Clareza e Direção</h4>
-                    <p>Entenda seus padrões e tome decisões com mais segurança e autoconfiança.</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>Saúde Emocional</h4>
-                    <p>Aprenda ferramentas práticas para lidar com a ansiedade, o estresse e a tristeza.</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>Autoconhecimento Profundo</h4>
-                    <p>Desenvolva uma relação mais forte e gentil consigo mesmo(a) e com os outros.</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h3>Como funciona a nossa jornada juntos?</h3>
-            <ol>
-                <li><strong>Nossa Primeira Conversa:</strong> É um momento para nos conhecermos. Você poderá compartilhar suas questões em um ambiente de total sigilo e sem julgamentos, e eu explicarei em detalhes como meu trabalho pode ajudar nos seus objetivos específicos.</li>
-                <li><strong>Sessões Estruturadas e Práticas:</strong> Usando as ferramentas da TCC, vamos trabalhar juntos para identificar os padrões de pensamento e comportamento que te limitam. Você aprenderá técnicas e habilidades práticas para aplicar no seu dia a dia.</li>
-                <li><strong>Foco em Sua Evolução:</strong> A terapia é um processo colaborativo. Nossa meta é que você desenvolva autonomia e as ferramentas internas para construir uma vida com mais bem-estar e clareza.</li>
-            </ol>
-        </section>
-
-        <section>
-            <h3>O que meus pacientes dizem</h3>
-            <blockquote>
-                <p>"Jéssica é uma profissional maravilhosa! Atenciosa e cuidadosa, criando assim um ambiente seguro e confortável para o paciente."</p>
-                <cite>- Suelen D.</cite>
-            </blockquote>
-            <blockquote>
-                <p>"Atendimento com amor, dedicação, qualidade e competência que se vê refletidos na evolução do paciente. Muito obrigada, Dra. Jéssica!"</p>
-                <cite>- Iracema N.</cite>
-            </blockquote>
-            <blockquote>
-                <p>"Excelente profissional! Muito atenciosa, precisa, competente, ética e muito humana. Recomendo demais!"</p>
-                <cite>- Xaenny C.</cite>
-            </blockquote>
-        </section>
+    <div class="social-proof-bar">
+        <span>Avaliação <strong>5 Estrelas</strong> no Google → <a href="https://www.google.com/search?sca_esv=56cf911bafc37ccc&sxsrf=AE3TifPHP9BThha6eL9cHuJhzEcApJ20Wg%3A1749437545519&q=Psic%C3%B3loga%20em%20Jo%C3%A3o%20Pessoa%20-J%C3%A9ssica%20Soares&stick=H4sIAAAAAAAAAONgU1IxqDBPTE5Ns0hKNjVLNDJJSbMyqDA1TTKzNLA0S0sytzRKTEtcxKodUJyZfHhzTn56okJqroJX_uHF-QoBqcXF-YkKul6HVxYDpRMVgvMTi1KLAcFvLEZWAAAA&mat=CY46irho6cU1&ved=2ahUKEwjqlNTbquONAxUkq5UCHQGWAzgQrMcEegQIDRAC#mpd=~3874759690404117134/customers/reviews" target="_blank">Veja o que dizem os pacientes no Google</a></span>
     </div>
 
-    <section class="cta-section">
+    <section class="section">
         <div class="container">
-            <h3>Você não precisa ter todas as respostas. Você só precisa dar o primeiro passo.</h3>
-            <p>Investir na sua saúde mental é a decisão mais poderosa que você pode tomar pelo seu futuro. Se você está pronto(a) para ser ouvido(a) de verdade e iniciar um processo de mudança real e duradoura, estou aqui para ajudar.</p>
-            <a href="https://wa.me/5583986309163" class="button whatsapp-button">Fale Comigo no WhatsApp</a>
-            <a href="https://www.instagram.com/psicologia.jessicasoares/" class="button instagram-button">Siga no Instagram</a>
+            <h2>Sobre Mim e Nosso Espaço</h2>
+            <p style="max-width: 700px; margin: 0 auto; text-align: left;">Meu nome é <strong>Jéssica S. Barbosa</strong> (CRP 13/10484), e sou a psicóloga por trás da Harmony Vida & Saúde. Minha missão é ir além do atendimento institucional e oferecer um espaço terapêutico que seja verdadeiramente seu.</p>
+            <p style="max-width: 700px; margin: 1em auto; text-align: left;">Com foco na Terapia Cognitivo-Comportamental (TCC), meu trabalho é colaborativo e transparente, focado em te ajudar a alcançar seus objetivos de forma concreta. Estamos localizados no coração de Miramar, em um dos maiores centros médicos da região, para garantir seu conforto e discrição.</p>
+            <p style="max-width: 700px; margin: 1em auto; text-align: left;"><strong>Endereço:</strong> R. Antônio Rabelo Júnior, 170, Sala 503 - Miramar, João Pessoa - PB</p>
         </div>
     </section>
 
-    <footer>
-        <p>Psicóloga Clínica Jéssica Soares - CRP 13/10484 | Consultório em centro médico de referência no Miramar, JP | © 2025</p>
-        <p><a href="#">Política de Privacidade</a></p> </footer>
+    <footer class="main-footer">
+        <p><strong>Jéssica S. Barbosa</strong> | Psicóloga Clínica | CRP: 13/10484</p>
+        <p>Harmony Vida & Saúde | R. Antônio Rabelo Júnior, 170, Sala 503 - Miramar, João Pessoa - PB</p>
+        <p class="address-note">Um dos maiores Centros Médicos da Região</p>
+        <p><a href="#">Política de Privacidade</a></p>
+    </footer>
 
 </body>
 </html>
