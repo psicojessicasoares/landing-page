@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem Recebida</title>
+    <meta name="description" content="Agradecemos o seu contato! Sua mensagem foi recebida e em breve entraremos em contato.">
+    <meta name="keywords" content="psicologia, agradecimento, contato">
+    <meta name="author" content="Jéssica S. Barbosa">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16890450366"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-16890450366');     // Google Analytics 4 ID
+    </script>
+
+    <script>
+    function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+                window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+                'send_to': 'AW-16890450366/EmO4CMTxx9YaEL6j__U-',
+                'event_callback': callback
+        });
+        return false;
+    }
+    </script>
+
+    <style>
+        body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; color: #3a3a3a; background-color: #f9f9f9; line-height: 1.7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; color: #2c3e50; font-weight: 700; margin-top: 0; margin-bottom: 20px; }
+        p { margin-bottom: 1em; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; text-align: center;}
+
+        /* Header */
+        .main-header { background-color: #fff; padding: 15px 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; }
+        .main-header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8em; font-weight: 800; color: #4caf50; line-height: 1; }
+        .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 25px; }
+        .main-nav a { color: #555; font-weight: 500; transition: color 0.3s ease; white-space: nowrap; }
+        .main-nav a:hover { color: #4caf50; }
+        .btn-whats-nav { background-color: #4caf50; color: #fff !important; padding: 8px 18px; border-radius: 5px; font-weight: 600; transition: background-color 0.3s ease, transform 0.2s ease; margin-left: 20px; box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3); }
+        .btn-whats-nav:hover { background-color: #388e3c; transform: translateY(-1px); }
+
+        /* Footer */
+        .main-footer { background-color: #2c3e50; color: #ecf0f1; padding: 40px 0; text-align: center; font-size: 0.9em; position: absolute; bottom: 0; width: 100%; }
+        .footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
+        .footer-info, .footer-social { flex: 1; min-width: 250px; text-align: left; }
+        .footer-social { text-align: right; }
+        .footer-social a { color: #fff; font-size: 1.5em; margin: 0 10px; transition: color 0.3s ease; }
+        .footer-social a:hover { color: #4caf50; }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="#hero" class="logo" aria-label="Jéssica S. Barbosa - Início">Jéssica S. Barbosa</a>
+            <nav class="main-nav" aria-label="Navegação Principal">
+                <ul>
+                    <li><a href="https://psicojessicasoares.github.io/landing-page/">Início</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 150px;">
+        <div class="container">
+            <h2>Mensagem Recebida</h2>
+            <p style="font-size: 1.1em; color: #555; margin-bottom: 20px;">Recebemos seu contato com atenção. Em breve entraremos em contato para conversarmos com voce.</p>
+            <p><a href="https://www.instagram.com/psicologia.jessicasoares/" target="_blank" style="background-color: #4caf50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Siga-nos no Instagram</a></p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p><strong>Jéssica S. Barbosa</strong> | Psicóloga Clínica</p>
+                <p>CRP: 13/10484 | Consultório em Miramar, João Pessoa - PB</p>
+                <p>E-mail: psicologa.jessicasoares@gmail.com | Tel/WhatsApp: (83) 98630-9163</p>
+                <p>&copy; 2025 Todos os direitos reservados. <a href="/politica-de-privacidade">Política de Privacidade</a> | <a href="/termos-de-uso">Termos de Uso</a></p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/psicologia.jessicasoares" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Psicóloga Jéssica S. Barbosa"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

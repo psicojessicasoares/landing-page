@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jéssica S. Barbosa - Psicologia Clínica | Agende sua Consulta Online ou Presencial</title>
+    <meta name="description" content="Psicóloga Clínica Jéssica S. Barbosa: Atendimento online e presencial em João Pessoa. Terapia para ansiedade, depressão, estresse, autoconhecimento e desenvolvimento pessoal. Agende sua sessão para bem-estar emocional.">
+    <meta name="keywords" content="psicologia, terapia, psicólogo, joão pessoa, online, presencial, ansiedade, depressão, estresse, autoconhecimento, bem-estar, saúde mental, TCC, Jéssica Barbosa">
+    <meta name="author" content="Jéssica S. Barbosa">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16890450366"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-16890450366'); // Google Ads ID
+        gtag('config', 'G-7SSF4QG6QD');     // Google Analytics 4 ID
+    </script>
+
+    <script>
+    function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+                window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+                'send_to': 'AW-16890450366/EmO4CMTxx9YaEL6j__U-',
+                'event_callback': callback
+        });
+        return false;
+    }
+    </script>
+
+    <style>
+        body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; color: #3a3a3a; background-color: #f9f9f9; line-height: 1.7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; color: #2c3e50; font-weight: 700; margin-top: 0; margin-bottom: 20px; }
+        p { margin-bottom: 1em; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        .main-header { background-color: #fff; padding: 15px 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; }
+        .main-header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8em; font-weight: 800; color: #4caf50; line-height: 1; }
+        .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 25px; }
+        .main-nav a { color: #555; font-weight: 500; transition: color 0.3s ease; white-space: nowrap; }
+        .main-nav a:hover { color: #4caf50; }
+        .btn-whats-nav { background-color: #4caf50; color: #fff !important; padding: 8px 18px; border-radius: 5px; font-weight: 600; transition: background-color 0.3s ease, transform 0.2s ease; margin-left: 20px; box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3); }
+        .btn-whats-nav:hover { background-color: #388e3c; transform: translateY(-1px); }
+
+        /* Hero Section */
+        .hero-section { background-color: #f0f4f7; color: #2c3e50; text-align: center; padding: 120px 20px 100px; margin-top: 80px; position: relative; }
+        .hero-section h1 { font-size: 3.2em; color: #2c3e50; max-width: 900px; line-height: 1.2; margin: 0 auto 25px auto; font-weight: 800; }
+        .hero-section p { font-size: 1.3em; color: #555; max-width: 800px; margin: 0 auto 40px auto; }
+        .cta-button { display: inline-block; background-color: #4caf50; color: #fff !important; padding: 16px 40px; text-decoration: none; font-weight: 700; border-radius: 50px; font-size: 1.15em; transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; box-shadow: 0 5px 20px rgba(76, 175, 80, 0.4); }
+        .cta-button:hover { background-color: #388e3c; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(76, 175, 80, 0.5); }
+
+        /* General Sections */
+        .section { padding: 80px 0; text-align: center; }
+        .section.light-bg { background-color: #f0f4f7; }
+        .section h2 { font-size: 2.6em; margin-bottom: 40px; font-weight: 700; color: #2c3e50; }
+
+        /* About Section */
+        .about-content { display: flex; flex-wrap: wrap; align-items: center; gap: 60px; text-align: left; }
+        .about-image, .about-text { flex: 1; min-width: 300px; }
+        .about-image img { max-width: 300px; height: auto; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); display: block; margin: 0 auto 20px auto; }
+        .about-text p { font-size: 1.1em; color: #555; margin-bottom: 1.5em; }
+
+        /* Service/Specialties Cards */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: left; margin-top: 50px; }
+        .service-card { background-color: #fff; padding: 35px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
+        .service-card:hover { transform: translateY(-7px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); }
+        .service-card i { font-size: 3em; color: #4caf50; margin-bottom: 20px; display: block; }
+        .service-card h3 { font-size: 1.5em; margin-bottom: 12px; color: #2c3e50; font-weight: 600; }
+        .service-card p { font-size: 1em; color: #666; flex-grow: 1; }
+
+        /* Testimonials */
+        .testimonials-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+        .testimonial-card { background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); max-width: 380px; text-align: left; flex-basis: calc(33.333% - 20px); flex-grow: 1; flex-shrink: 1; min-width: 280px; }
+        .testimonial-card p:first-of-type { font-style: italic; font-size: 1.1em; color: #555; margin-bottom: 15px; position: relative; padding-left: 20px; }
+        .testimonial-card p:first-of-type::before { content: "\201C"; font-size: 3em; color: #4caf50; position: absolute; left: 0; top: -10px; opacity: 0.5; }
+        .testimonial-card p:last-child { font-weight: 700; margin-top: 0; text-align: right; font-style: normal; color: #333; }
+
+        /* FAQ */
+        .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
+        .faq-item { background-color: #fff; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05); overflow: hidden; }
+        .faq-question { padding: 20px 25px; background-color: #fff; color: #2c3e50; font-weight: 600; font-size: 1.1em; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; transition: background-color 0.3s ease; }
+        .faq-question:hover { background-color: #f5f5f5; }
+        .faq-question .icon { font-size: 1em; transition: transform 0.3s ease; }
+        .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.4s ease-out; color: #555; }
+        .faq-answer p { padding-top: 15px; padding-bottom: 15px; margin: 0; }
+        .faq-item.active .faq-question { background-color: #e8f5e9; border-bottom: 1px solid #4caf50; }
+        .faq-item.active .faq-question .icon { transform: rotate(180deg); }
+        .faq-item.active .faq-answer { max-height: 200px; padding-top: 20px; padding-bottom: 20px; } /* Ajuste max-height conforme o maior texto */
+
+        /* Contact Section */
+        .contact-content { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; text-align: left; max-width: 900px; margin: 0 auto; }
+        .contact-info, .contact-form-container { flex: 1; min-width: 300px; }
+        .contact-info p { font-size: 1.1em; margin-bottom: 15px; color: #555; }
+        .contact-info i { color: #4caf50; margin-right: 10px; font-size: 1.2em; }
+        .contact-form-container { background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); }
+        .contact-form-container h3 { text-align: center; margin-bottom: 25px; color: #2c3e50; font-size: 1.8em; }
+        .contact-form-container form label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
+        .contact-form-container form input[type="text"], .contact-form-container form input[type="email"], .contact-form-container form textarea { width: calc(100% - 20px); padding: 12px 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; font-size: 1em; color: #3a3a3a; transition: border-color 0.3s ease; }
+        .contact-form-container form input[type="text"]:focus, .contact-form-container form input[type="email"]:focus, .contact-form-container form textarea:focus { border-color: #4caf50; outline: none; box-shadow: 0 0 5px rgba(76, 175, 80, 0.3); }
+        .contact-form-container form textarea { resize: vertical; min-height: 100px; }
+        .contact-form-container form button { display: block; width: 100%; background-color: #4caf50; color: #fff; padding: 15px 25px; border: none; border-radius: 5px; font-size: 1.1em; font-weight: 700; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s; box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4); }
+        .contact-form-container form button:hover { background-color: #388e3c; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(76, 175, 80, 0.5); }
+
+        /* Footer */
+        .main-footer { background-color: #2c3e50; color: #ecf0f1; padding: 40px 0; text-align: center; font-size: 0.9em; }
+        .footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
+        .footer-info, .footer-social { flex: 1; min-width: 250px; text-align: left; }
+        .footer-social { text-align: right; }
+        .footer-social a { color: #fff; font-size: 1.5em; margin: 0 10px; transition: color 0.3s ease; }
+        .footer-social a:hover { color: #4caf50; }
+
+        /* Section Divider */
+        .section-divider { border: 0; height: 1px; background-color: #eee; margin: 0; }
+
+        /* Responsiveness */
+        @media (max-width: 992px) {
+            .hero-section h1 { font-size: 2.8em; }
+            .hero-section p { font-size: 1.1em; }
+            .section h2 { font-size: 2.2em; }
+            .about-content { gap: 30px; }
+            .services-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+            .testimonial-card { flex-basis: calc(50% - 15px); }
+            .after-about-section-image { max-width: 700px; } /* Ajuste */
+        }
+
+        @media (max-width: 768px) {
+            .section { padding: 40px 15px; }
+            .section h2 { font-size: 1.8em; margin-bottom: 30px; }
+            .container { padding: 0 15px; }
+            .main-header .container { flex-direction: column; gap: 10px; padding: 10px 15px; align-items: center; }
+            .main-nav { width: 100%; text-align: center; }
+            .main-nav ul { flex-direction: column; align-items: center; gap: 8px; margin: 0 auto; }
+            .btn-whats-nav { margin-left: 0; margin-top: 10px; }
+            .hero-section { padding-top: 160px; padding-bottom: 60px; margin-top: 0; }
+            .hero-section h1 { font-size: 2.4em; }
+            .hero-section p { font-size: 1em; }
+            .cta-button { padding: 12px 30px; font-size: 1em; }
+            .about-content { flex-direction: column; text-align: center; gap: 30px; }
+            .about-image { order: -1; min-width: auto; max-width: 80%; margin: 0 auto; }
+            .about-image img { border-radius: 50%; width: 300px; height: auto; object-fit: cover; }
+            .about-text { min-width: auto; }
+            .services-grid { grid-template-columns: 1fr; gap: 20px; }
+            .service-card { padding: 25px; }
+            .testimonial-card { flex-basis: 100%; }
+            .faq-question { font-size: 1em; padding: 15px 20px; }
+            .faq-answer { padding: 0 20px; }
+            .faq-answer p { padding-top: 10px; padding-bottom: 10px; }
+            .contact-content { flex-direction: column; gap: 30px; }
+            .contact-info, .contact-form-container { min-width: auto; }
+            .after-about-section-image { max-width: 100%; border-radius: 8px; } /* Ajuste para retangular no mobile */
+            .footer-content { flex-direction: column; gap: 15px; }
+            .footer-info, .footer-social { min-width: auto; text-align: center; }
+            .footer-social a { margin: 0 8px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section h1 { font-size: 1.8em; }
+            .hero-section p { font-size: 0.9em; }
+            .section h2 { font-size: 1.5em; }
+            .logo { font-size: 1.5em; }
+            .main-nav a { font-size: 0.9em; }
+            .btn-whats-nav { padding: 6px 12px; font-size: 0.9em; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="#hero" class="logo" aria-label="Jéssica S. Barbosa - Início">Jéssica S. Barbosa</a>
+            <nav class="main-nav" aria-label="Navegação Principal">
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#atendimento">Atendimento</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="https://wa.me/5583986309163" class="btn-whats-nav" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion('https://wa.me/5583986309163');"><i class="fab fa-whatsapp"></i> Agende Online</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h1>Sua Jornada para o Bem-Estar Começa Aqui.</h1>
+                <p>Um espaço seguro e acolhedor para você encontrar clareza, superar desafios e florescer.</p>
+                <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion('https://wa.me/5583986309163');">Agende sua Primeira Conversa</a>
+            </div>
+        </section>
+
+        <hr class="section-divider" aria-hidden="true">
+
+        <section id="sobre" class="section light-bg">
+            <div class="container">
+                <h2>Sobre Mim</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Olá! Meu nome é Jéssica S. Barbosa, psicóloga clínica com **CRP: 13/10484**. Minha paixão é facilitar a sua jornada em direção ao autoconhecimento, equilíbrio emocional e bem-estar.</p>
+                        <p>Com anos de experiência e dedicação, meu trabalho é oferecer um ambiente terapêutico seguro, ético e empático, onde você possa se sentir à vontade para explorar seus sentimentos, pensamentos e desafios, sem julgamentos.</p>
+                        <p>Minha abordagem principal é a **Terapia Cognitivo-Comportamental (TCC)**, uma metodologia comprovada e focada em resultados práticos. Juntos, vamos identificar padrões de pensamento e comportamento que geram sofrimento e desenvolver estratégias eficazes para você lidar com as adversidades da vida, construir resiliência e promover mudanças duradouras.</p>
+                        <p>Acredito profundamente no potencial de cada pessoa para superar obstáculos e encontrar sua própria força. Se você busca um caminho para viver com mais leveza, autoconfiança e propósito, estou aqui para caminhar com você.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://raw.githubusercontent.com/psicojessicasoares/landing-page/main/foto%20profissional.png" alt="Retrato da Psicóloga Jéssica S. Barbosa">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider" aria-hidden="true">
+
+        <section id="especialidades" class="section">
+            <div class="container">
+                <h2>Especialidades e Áreas de Atuação</h2>
+                <p>Através da Terapia Cognitivo-Comportamental (TCC), ofereço suporte especializado nas seguintes áreas:</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-frown-open"></i>
+                        <h3>Transtornos de Humor</h3>
+                        <p>Acompanhamento e estratégias para lidar com Depressão, Distimia e Bipolaridade, buscando o reestabelecimento do bem-estar e da qualidade de vida.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-hand-fist"></i>
+                        <h3>Transtornos de Ansiedade</h3>
+                        <p>Ferramentas para manejar Ansiedade Generalizada, Síndrome do Pânico, Fobias, Transtorno Obsessivo-Compulsivo (TOC) e Estresse.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Autoconhecimento</h3>
+                        <p>Processo de exploração interna para compreender seus pensamentos, emoções e comportamentos, promovendo clareza e fortalecimento pessoal.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Questões de Autoestima</h3>
+                        <p>Trabalho para fortalecer a autoimagem, a autoconfiança e o amor-próprio, construindo uma relação mais saudável consigo mesmo(a).</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Habilidades Sociais e Relacionamentos</h3>
+                        <p>Desenvolvimento de comunicação assertiva, resolução de conflitos e construção de relacionamentos mais saudáveis e satisfatórios.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-sad-cry"></i>
+                        <h3>Luto e Perdas</h3>
+                        <p>Apoio psicológico para lidar com o processo de luto, separações, mudanças significativas e outras formas de perdas emocionais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider" aria-hidden="true">
+
+        <section id="atendimento" class="section light-bg">
+            <div class="container">
+                <h2>Modalidades de Atendimento</h2>
+                <p>Escolha a modalidade que melhor se adapta às suas necessidades e rotina:</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>Atendimento Online</h3>
+                        <p>Conveniência e flexibilidade para você cuidar da sua saúde mental de qualquer lugar, com sessões por videochamada seguras e sigilosas.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-building"></i>
+                        <h3>Atendimento Presencial</h3>
+                        <p>Consultas no consultório em Miramar, João Pessoa - PB, para quem prefere o contato direto e um ambiente terapêutico dedicado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider" aria-hidden="true">
+
+        <section id="depoimentos" class="section">
+            <div class="container">
