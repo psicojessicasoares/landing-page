@@ -23,7 +23,7 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'AW-16890450366'); // Google Ads ID
-        gtag('config', 'G-7SSF4QG6QD');     // Google Analytics 4 ID
+        gtag('config', 'G-7SSF4QG6QD');    // Google Analytics 4 ID
     </script>
 
     <script>
@@ -293,3 +293,141 @@
 
         <section id="depoimentos" class="section">
             <div class="container">
+                <h2>O que dizem os pacientes</h2>
+                <div class="testimonials-container">
+                    <div class="testimonial-card">
+                        <p>"A Jéssica me ajudou a ver as coisas de uma perspectiva diferente e a lidar com minha ansiedade de forma muito mais eficaz. Sou muito grata!"</p>
+                        <p>- Ana P.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Sempre me senti acolhida e compreendida nas sessões. A TCC fez toda a diferença na minha vida. Recomendo muito!"</p>
+                        <p>- Carlos M.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"As sessões online são super práticas e eficientes. Sinto que evoluí muito no meu autoconhecimento. Ótima profissional!"</p>
+                        <p>- Sofia L.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider" aria-hidden="true">
+
+        <section id="faq" class="section light-bg">
+            <div class="container">
+                <h2>Perguntas Frequentes</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            O que é Terapia Cognitivo-Comportamental (TCC)?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>A TCC é uma abordagem terapêutica que se concentra em como seus pensamentos, sentimentos e comportamentos estão interligados. Ela ajuda a identificar padrões de pensamento negativos ou disfuncionais e a desenvolver estratégias para mudá-los, resultando em comportamentos e emoções mais saudáveis.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Qual a diferença entre atendimento online e presencial?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>O atendimento online oferece flexibilidade e conveniência, permitindo sessões de qualquer lugar via videochamada. O atendimento presencial ocorre no consultório, proporcionando um ambiente físico dedicado e contato direto. Ambos são igualmente eficazes, a escolha depende da sua preferência e necessidade.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Quanto tempo dura uma sessão?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Geralmente, as sessões de terapia duram entre 50 a 60 minutos.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Qual a frequência das sessões?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>A frequência ideal é discutida e acordada entre você e a psicóloga, mas usualmente as sessões são semanais, especialmente no início do tratamento.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            É possível conseguir reembolso pelo plano de saúde?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim, muitos planos de saúde oferecem reembolso para sessões de psicoterapia. Forneço os recibos necessários para que você possa solicitar o reembolso ao seu convênio. Verifique as condições do seu plano.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider" aria-hidden="true">
+
+        <section id="contato" class="section">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Atendimento Presencial: Rua XYZ, 123 - Miramar, João Pessoa - PB</p>
+                        <p><i class="fas fa-phone-alt"></i> Telefone/WhatsApp: <a href="https://wa.me/5583986309163" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion('https://wa.me/5583986309163');">+55 (83) 98630-9163</a></p>
+                        <p><i class="fas fa-envelope"></i> E-mail: <a href="mailto:contato@jessicabarbosa.com">contato@jessicabarbosa.com</a></p>
+                        <p><i class="fas fa-clock"></i> Horário de Atendimento: Agendamento prévio</p>
+                        <p>Ou, se preferir, use o formulário ao lado para enviar uma mensagem:</p>
+                    </div>
+                    <div class="contact-form-container">
+                        <h3>Envie sua Mensagem</h3>
+                        <form action="YOUR_FORM_SUBMISSION_URL" method="POST"> <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="phone">Telefone (opcional):</label>
+                            <input type="text" id="phone" name="phone">
+
+                            <label for="message">Mensagem:</label>
+                            <textarea id="message" name="message" required></textarea>
+
+                            <button type="submit">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 Jéssica S. Barbosa - Psicologia Clínica. Todos os direitos reservados.</p>
+                <p>CRP: 13/10484</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/jessicabarbosa_psicologa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Jéssica S. Barbosa"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5583986309163" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp da Jéssica S. Barbosa"><i class="fab fa-whatsapp"></i></a>
+                </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script para funcionalidade do FAQ (abre/fecha respostas)
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const faqItem = question.closest('.faq-item');
+                    faqItem.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
