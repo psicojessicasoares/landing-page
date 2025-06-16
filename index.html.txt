@@ -25,10 +25,15 @@
 
     <main>
         <section class="section about">
-            <div class="container">
-                <h2>Sobre Mim</h2>
-                <p>Sou Jéssica Soares, psicóloga com paixão por ajudar pessoas a encontrarem equilíbrio e clareza em suas vidas. Minha abordagem é baseada na escuta ativa, empatia e em técnicas comprovadas para promover o autoconhecimento e o desenvolvimento pessoal.</p>
-                <p>Acredito que cada indivíduo é único e, por isso, construo um plano terapêutico personalizado, focado nas suas necessidades e objetivos. Juntos, podemos construir um caminho para uma vida mais plena e significativa.</p>
+            <div class="container about-content">
+                <div class="about-text">
+                    <h2>Sobre Mim</h2>
+                    <p>Sou Jéssica Soares, psicóloga com paixão por ajudar pessoas a encontrarem equilíbrio e clareza em suas vidas. Minha abordagem é baseada na escuta ativa, empatia e em técnicas comprovadas para promover o autoconhecimento e o desenvolvimento pessoal.</p>
+                    <p>Acredito que cada indivíduo é único e, por isso, construo um plano terapêutico personalizado, focado nas suas necessidades e objetivos. Juntos, podemos construir um caminho para uma vida mais plena e significativa.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/sua-foto-sobre-mim.jpg" alt="Foto de Jéssica Soares">
+                </div>
             </div>
         </section>
 
