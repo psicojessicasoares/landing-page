@@ -134,52 +134,50 @@
             padding: 120px 20px 100px;
             margin-top: 80px; /* Para não ficar embaixo do header fixo */
             position: relative;
-            background-image: url('https://raw.githubusercontent.com/psicojessicasoares/landing-page/main/foto%20profissional.png'); /* **Mude para o caminho da sua imagem!** */
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            background-position: right center;
-            height: 600px;
             display: flex;
             align-items: center;
-            overflow: hidden;
+            justify-content: center; /* Centraliza o conteúdo horizontalmente */
+            height: 450px; /* Altura fixa para esta seção */
         }
 
         .hero-section .container {
             display: flex;
-            align-items: center;
+            flex-direction: column; /* Conteúdo em coluna */
+            align-items: center; /* Alinha o conteúdo ao centro */
+            justify-content: center; /* Centraliza verticalmente */
             height: 100%;
             position: relative;
             z-index: 5;
-            text-align: left;
+            text-align: center;
         }
 
         .hero-text-content {
-            flex: 1; /* Permite que o texto ocupe o espaço restante */
-            max-width: 60%; /* Ajusta a largura do texto para não colidir com a imagem */
-            padding-right: 20px; /* Espaçamento da imagem */
+            max-width: 800px; /* Largura máxima do texto */
+            margin: 0 auto; /* Centraliza o bloco de texto */
         }
 
         .hero-section h1 {
             font-size: 3.2em;
-            color: var(--text-color-light);
+            color: var(--text-color-light); /* Cor branca para o texto */
             line-height: 1.2;
             margin: 0 0 25px 0;
             font-weight: 800;
             font-style: italic;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra para o texto para dar destaque */
         }
 
         .hero-section p {
             font-size: 1.3em;
-            color: var(--text-color-light);
+            color: var(--text-color-light); /* Cor branca para o texto */
             margin: 0 0 40px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Sombra para o texto para dar destaque */
         }
         
         .hero-buttons {
             display: flex;
             gap: 20px; /* Espaçamento entre os botões */
             flex-wrap: wrap; /* Para quebrar em linha em telas menores */
-            justify-content: flex-start; /* Alinha à esquerda */
+            justify-content: center; /* Centraliza os botões */
         }
 
         .cta-button {
@@ -466,23 +464,13 @@
 
             .hero-section {
                 height: auto; /* Altura flexível em telas menores */
-                background-size: cover; /* Ajusta a imagem para cobrir melhor */
-                background-position: center bottom; /* Ajusta a imagem para mostrar mais da pessoa */
                 padding-top: 160px; /* Mais espaço para o header fixo */
                 padding-bottom: 60px;
                 margin-top: 0; /* Remove margem superior pois padding-top já cuida do espaçamento */
             }
-            .hero-section .container {
-                flex-direction: column; /* Conteúdo do hero em coluna */
-                text-align: center; /* Centraliza o texto */
-            }
             .hero-text-content {
                 max-width: 90%; /* Aumenta a largura do texto em telas médias */
                 padding-right: 0;
-            }
-            .hero-section h1, .hero-section p {
-                margin-left: auto; /* Centraliza */
-                margin-right: auto; /* Centraliza */
             }
             .hero-section h1 { font-size: 2.8em; }
             .hero-section p { font-size: 1.1em; }
@@ -793,7 +781,7 @@
                 <p><strong>Jéssica S. Barbosa</strong> | Psicóloga Clínica</p>
                 <p>CRP: 13/10484 | Consultório em Miramar, João Pessoa - PB</p>
                 <p>E-mail: psicologa.jessicasoares@gmail.com | Tel/WhatsApp: (83) 98630-9163</p>
-                <p>&copy; 2025 Todos os direitos reservados. <a href="/politica-de-privacidade">Política de Privacidade</a> | <a href="/termos-de-uso">Termos de Uso</a></p>
+                <p>© 2025 Todos os direitos reservados. <a href="/politica-de-privacidade">Política de Privacidade</a> | <a href="/termos-de-uso">Termos de Uso</a></p>
             </div>
             <div class="footer-social">
                 <a href="https://www.instagram.com/psicologia.jessicasoares" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Psicóloga Jéssica S. Barbosa"><i class="fab fa-instagram"></i></a>
