@@ -131,7 +131,8 @@
             background-color: var(--primary-purple); /* Fundo roxo sólido */
             color: var(--text-color-light);
             padding: 120px 20px 100px;
-            margin-top: 80px; /* Para não ficar embaixo do header fixo */
+            /* Ajuste o margin-top para ser ligeiramente maior que a altura do header fixo para desktop */
+            margin-top: 80px; 
             position: relative;
             display: flex; /* Habilitar flexbox para alinhar texto e imagem */
             align-items: center; /* Alinhar verticalmente ao centro */
@@ -481,7 +482,9 @@
                 flex-direction: column; /* Empilha texto e imagem */
                 text-align: center; /* Centraliza o conteúdo */
                 align-items: center;
-                padding-top: 160px; /* Mantém espaço para o header fixo */
+                /* Ajuste o padding-top para mobile, considerando a altura do header fixo. */
+                /* A altura do header pode variar, um valor um pouco maior garante que não sobreponha */
+                padding-top: 120px; /* Reduzindo um pouco do 160px anterior que pode ser alto demais */
                 padding-bottom: 60px; /* Garante espaço na parte inferior */
             }
             .hero-text-content {
@@ -491,7 +494,6 @@
                 margin-bottom: 30px; /* Adiciona espaço abaixo do bloco de texto */
             }
             .hero-image-container {
-                /* A imagem virá depois do texto no HTML, então aparece abaixo com flex-direction: column */
                 margin-left: 0;
                 margin-bottom: 30px; /* Adiciona espaço abaixo da imagem */
                 max-width: 70%; /* Controla o tamanho da imagem em tablets */
@@ -516,7 +518,8 @@
             .section h2 { font-size: 1.8em; margin-bottom: 30px; }
             .container { padding: 0 15px; }
             .hero-section {
-                padding-top: 140px; /* Ajuste para telas menores */
+                /* Ajuste o padding-top para telas de celular, pode ser mais ajustado ainda */
+                padding-top: 100px; /* Um valor que geralmente funciona bem para a maioria dos cabeçalhos fixos em mobile */
                 padding-bottom: 50px;
             }
             .hero-text-content h1 {
@@ -555,7 +558,6 @@
             .logo { font-size: 1.5em; }
             .main-nav a { font-size: 0.9em; }
             .btn-whats-nav { padding: 6px 12px; font-size: 0.9em; }
-            /* Não há necessidade de mexer em hero-image-container ou cta-button/instagram-button aqui se os 768px já resolveram, mas você pode ajustar se notar problemas específicos em telas muito pequenas */
         }
     </style>
 </head>
