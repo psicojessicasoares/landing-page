@@ -3,85 +3,833 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra. Jéssica Soares - Psicóloga</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Jéssica S. Barbosa - Psicologia Clínica | Agende sua Consulta Online ou Presencial</title>
+    <meta name="description" content="Psicóloga Clínica Jéssica S. Barbosa: Atendimento online e presencial em João Pessoa. Terapia para ansiedade, depressão, estresse, autoconhecimento e desenvolvimento pessoal. Agende sua sessão para bem-estar emocional.">
+    <meta name="keywords" content="psicologia, terapia, psicólogo, joão pessoa, online, presencial, ansiedade, depressão, estresse, autoconhecimento, bem-estar, saúde mental, TCC, Jéssica Barbosa">
+    <meta name="author" content="Jéssica S. Barbosa">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16890450366"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-16890450366'); // Google Ads ID
+        gtag('config', 'G-7SSF4QG6QD');    // Google Analytics 4 ID
+    </script>
+
+    <script>
+    function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+                window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+                'send_to': 'AW-16890450366/EmO4CMTxx9YaEL6j__U-',
+                'event_callback': callback
+        });
+        return false;
+    }
+    </script>
+
+    <style>
+        /* Definição de variáveis de cores */
+        :root {
+            --primary-purple: #7B68EE; /* Um roxo suave, similar ao da imagem */
+            --secondary-orange: #FF8C00; /* Um laranja vibrante para o CTA */
+            --text-color-dark: #333;
+            --text-color-light: #F8F8F8; /* Quase branco para texto em fundos escuros */
+            --light-bg: #F8F8F8; /* Fundo suave para seções brancas */
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color-dark);
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1080px; /* Um pouco mais largo para seções */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Header / Navegação --- */
+        .main-header {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8em;
+            font-weight: 800;
+            color: var(--primary-purple); /* Usando a cor primária */
+            line-height: 1;
+            text-decoration: none; /* Remover sublinhado do link do logo */
+        }
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+        }
+        .main-nav a {
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+            text-decoration: none; /* Remover sublinhado dos links de navegação */
+        }
+        .main-nav a:hover {
+            color: var(--primary-purple); /* Usando a cor primária */
+        }
+        .btn-whats-nav {
+            background-color: #25D366; /* Cor do WhatsApp */
+            color: #fff !important;
+            padding: 8px 18px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-left: 20px;
+            box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+            text-decoration: none;
+        }
+        .btn-whats-nav:hover {
+            background-color: #1DA851; /* Tom mais escuro */
+            transform: translateY(-1px);
+        }
+
+        /* --- Hero Section (Capa) --- */
+        .hero-section {
+            background-color: var(--primary-purple); /* Fundo roxo sólido */
+            color: var(--text-color-light);
+            padding: 160px 20px 140px; /* Aumentei um pouco o padding vertical agora que não tem imagem */
+            margin-top: 100px; /* GARANTE ESPAÇO PARA O HEADER NO DESKTOP */
+            position: relative;
+            display: flex; /* Manter flex para centralizar o conteúdo horizontalmente se precisar */
+            align-items: center; /* Centralizar verticalmente */
+            justify-content: center; /* Centralizar horizontalmente o texto e botões */
+            overflow: hidden;
+            text-align: center; /* Centralizar o texto dentro do hero-text-content */
+        }
+
+        .hero-text-content {
+            max-width: 80%; /* Ajuste a largura máxima do texto para não ficar muito esticado */
+            padding-right: 0; /* Remova o padding direito, já que não tem imagem */
+            text-align: center; /* Garante que o texto interno esteja centralizado */
+            margin: 0 auto; /* Centraliza o bloco de texto na tela */
+        }
+
+        .hero-text-content h1 {
+            font-size: 3.2em;
+            color: var(--text-color-light); /* Cor branca para o texto */
+            line-height: 1.2;
+            margin: 0 auto 20px auto; /* Centraliza o título e adiciona margem abaixo */
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra para o texto para dar destaque */
+        }
+
+        .hero-text-content .sub-title {
+            font-size: 1.1em; /* Tamanho discreto para a nova linha */
+            color: rgba(255, 255, 255, 0.8); /* Cor mais clara para discreto */
+            margin-bottom: 30px; /* Espaçamento abaixo do subtítulo */
+            display: block; /* Garante que fique em uma nova linha */
+        }
+
+        .hero-section p {
+            font-size: 1.3em;
+            color: var(--text-color-light); /* Cor branca para o texto */
+            margin: 0 auto 40px auto; /* Centraliza o parágrafo */
+            max-width: 700px; /* Limita a largura do parágrafo para melhor leitura */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Sombra para o texto para dar destaque */
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center; /* Centraliza os botões */
+        }
+
+        .cta-button {
+            display: inline-flex; /* Para alinhar ícone e texto */
+            align-items: center;
+            background-color: var(--secondary-orange); /* Laranja vibrante */
+            color: #fff !important;
+            padding: 16px 35px; /* Ajustado */
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 50px;
+            font-size: 1.15em;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(255, 140, 0, 0.4); /* Sombra com cor do botão */
+        }
+        .cta-button i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        .cta-button:hover {
+            background-color: #E67E22; /* Tom mais escuro no hover */
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 140, 0, 0.5);
+        }
+
+        .instagram-button {
+            background-color: #E1306C; /* Cor do Instagram */
+            color: #fff !important;
+            box-shadow: 0 5px 20px rgba(225, 48, 108, 0.4);
+        }
+        .instagram-button:hover {
+            background-color: #C13584; /* Tom mais escuro do Instagram */
+            box-shadow: 0 8px 25px rgba(225, 48, 108, 0.5);
+        }
+
+        /* Remover as regras de .hero-image-container se a imagem foi removida do HTML */
+        /* .hero-image-container foi removido do HTML e as regras abaixo não são mais necessárias */
+
+        /* General Sections */
+        .section { padding: 80px 0; text-align: center; }
+        .section.light-bg { background-color: var(--light-bg); }
+        .section h2 {
+            font-size: 2.6em;
+            margin-bottom: 40px;
+            font-weight: 700;
+            color: var(--primary-purple); /* Títulos das seções com a cor primária */
+            position: relative;
+            display: inline-block;
+        }
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 80px; /* Linha de destaque um pouco maior */
+            height: 4px; /* Mais grossa */
+            background-color: var(--secondary-orange); /* Usando a cor do CTA para o destaque */
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+        .section p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            color: #555;
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center; /* Centraliza conteúdo em telas menores */
+            gap: 60px;
+            text-align: left;
+        }
+        .about-image-container {
+            flex-shrink: 0; /* Não encolhe */
+            width: 300px;
+            height: 300px;
+            border-radius: 50%; /* Mantido circular para a seção "Sobre Mim" */
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin: 0 auto 20px auto; /* Centraliza em mobile */
+        }
+        .about-image-container img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            max-width: 700px; /* Limita largura do texto para melhor leitura */
+        }
+        .about-text p { font-size: 1.1em; color: #555; margin-bottom: 1.5em; text-align: justify; }
+
+        /* Location Section */
+        .location-info {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .location-info p {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .location-info .map-link {
+            display: inline-block;
+            background-color: var(--primary-purple);
+            color: var(--white) !important;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 15px;
+        }
+        .location-info .map-link i {
+            margin-right: 8px;
+        }
+        .location-info .map-link:hover {
+            background-color: #6a5acd;
+            transform: translateY(-2px);
+        }
+
+        /* Service/Specialties Cards */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: left; margin-top: 50px; }
+        .service-card {
+            background-color: #fff;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .service-card:hover { transform: translateY(-7px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); }
+        .service-card i { font-size: 3em; color: var(--primary-purple); /* Cor dos ícones */ margin-bottom: 20px; display: block; }
+        .service-card h3 { font-size: 1.5em; margin-bottom: 12px; color: #2c3e50; font-weight: 600; }
+        .service-card p { font-size: 1em; color: #666; flex-grow: 1; }
+
+        /* Testimonials */
+        .testimonials-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+        .testimonial-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            max-width: 380px;
+            text-align: left;
+            flex-basis: calc(33.333% - 20px);
+            flex-grow: 1;
+            flex-shrink: 1;
+            min-width: 280px;
+        }
+        .testimonial-card p:first-of-type {
+            font-style: italic;
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .testimonial-card p:first-of-type::before {
+            content: "\201C";
+            font-size: 3em;
+            color: var(--primary-purple); /* Cor das aspas */
+            position: absolute;
+            left: 0;
+            top: -10px;
+            opacity: 0.5;
+        }
+        .testimonial-card p:last-child {
+            font-weight: 700;
+            margin-top: 0;
+            text-align: right;
+            font-style: normal;
+            color: #333;
+        }
+
+        /* FAQ */
+        .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
+        .faq-item { background-color: #fff; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05); overflow: hidden; }
+        .faq-question {
+            padding: 20px 25px;
+            background-color: #fff;
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 1.1em;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.3s ease;
+        }
+        .faq-question:hover { background-color: #f5f5f5; }
+        .faq-question .icon { font-size: 1em; transition: transform 0.3s ease; }
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            color: #555;
+        }
+        .faq-answer p { padding-top: 15px; padding-bottom: 15px; margin: 0; }
+        .faq-item.active .faq-question { background-color: #e8f5e9; border-bottom: 1px solid var(--primary-purple); } /* Cor na FAQ ativa */
+        .faq-item.active .faq-question .icon { transform: rotate(180deg); }
+        .faq-item.active .faq-answer { max-height: 200px; padding-top: 20px; padding-bottom: 20px; } /* Ajuste max-height conforme o maior texto */
+
+        /* Contact Section */
+        .contact-content { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; text-align: left; max-width: 900px; margin: 0 auto; }
+        .contact-info, .contact-form-container { flex: 1; min-width: 300px; }
+        .contact-info p { font-size: 1.1em; margin-bottom: 15px; color: #555; }
+        .contact-info i { color: var(--primary-purple); /* Cor dos ícones de contato */ margin-right: 10px; font-size: 1.2em; }
+        .contact-form-container { background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); }
+        .contact-form-container h3 { text-align: center; margin-bottom: 25px; color: #2c3e50; font-size: 1.8em; }
+        .contact-form-container form label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
+        .contact-form-container form input[type="text"], .contact-form-container form input[type="email"], .contact-form-container form textarea {
+            width: calc(100% - 20px);
+            padding: 12px 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1em;
+            color: #3a3a3a;
+            transition: border-color 0.3s ease;
+        }
+        .contact-form-container form input[type="text"]:focus, .contact-form-container form input[type="email"]:focus, .contact-form-container form textarea:focus {
+            border-color: var(--primary-purple); /* Cor da borda no foco */
+            outline: none;
+            box-shadow: 0 0 5px rgba(123, 104, 238, 0.3);
+        }
+        .contact-form-container form textarea { resize: vertical; min-height: 100px; }
+        .contact-form-container form button {
+            display: block;
+            width: 100%;
+            background-color: var(--primary-purple); /* Cor do botão de enviar */
+            color: #fff;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(123, 104, 238, 0.4);
+        }
+        .contact-form-container form button:hover {
+            background-color: #6a5acd; /* Tom mais escuro no hover */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(123, 104, 238, 0.5);
+        }
+
+        /* Footer */
+        .main-footer {
+            background-color: #2c3e50; /* Fundo escuro para o rodapé */
+            color: #ecf0f1;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        .footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
+        .footer-info, .footer-social { flex: 1; min-width: 250px; text-align: left; }
+        .footer-social { text-align: right; }
+        .footer-social a { color: #fff; font-size: 1.5em; margin: 0 10px; transition: color 0.3s ease; }
+        .footer-social a:hover { color: var(--primary-purple); /* Cor de destaque no hover */ }
+
+        /* Section Divider */
+        .section-divider { border: 0; height: 1px; background-color: #eee; margin: 0; }
+
+        /* Responsiveness */
+        @media (max-width: 992px) {
+            .main-header .container { flex-direction: column; gap: 10px; padding: 10px 15px; align-items: center; }
+            .main-nav { width: 100%; text-align: center; }
+            .main-nav ul { flex-direction: column; align-items: center; gap: 8px; margin: 0 auto; }
+            .btn-whats-nav { margin-left: 0; margin-top: 10px; }
+
+            .hero-section {
+                flex-direction: column; /* Empilha texto e botões */
+                text-align: center; /* Centraliza o conteúdo */
+                align-items: center;
+                padding-top: 160px; /* Mantém padding interno */
+                padding-bottom: 60px;
+                margin-top: 220px; /* <--- AUMENTADO AQUI para compensar o header fixo expandido */
+            }
+            .hero-text-content {
+                max-width: 90%; /* Aumenta a largura do texto em telas menores */
+                padding-right: 0;
+                text-align: center; /* Centraliza o texto */
+                margin-bottom: 30px; /* Adiciona espaço abaixo do bloco de texto */
+            }
+            /* .hero-image-container não existe mais no HTML */
+
+            .hero-buttons {
+                justify-content: center;
+                flex-direction: column; /* Empilha os botões */
+                align-items: center;
+                width: 100%; /* Ocupa a largura total para centralização */
+            }
+            .cta-button, .instagram-button {
+                width: 80%; /* Botões mais largos para fácil clique */
+                max-width: 350px;
+                margin-bottom: 15px; /* Espaço entre os botões empilhados */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section { padding: 40px 15px; }
+            .section h2 { font-size: 1.8em; margin-bottom: 30px; }
+            .container { padding: 0 15px; }
+            .hero-section {
+                padding-top: 140px; /* Ajuste para telas menores */
+                padding-bottom: 50px;
+                margin-top: 220px; /* <--- MANTIDO OU AUMENTADO AQUI para celulares */
+            }
+            .hero-text-content h1 {
+                font-size: 2.4em;
+            }
+            .hero-text-content .sub-title {
+                font-size: 0.9em;
+            }
+            .hero-section p { font-size: 1em; }
+            /* .hero-image-container não existe mais no HTML */
+            .cta-button, .instagram-button {
+                width: 90%; /* Ocupa mais largura em celulares */
+                margin-bottom: 10px;
+            }
+            .services-grid { grid-template-columns: 1fr; gap: 20px; }
+            .service-card { padding: 25px; }
+            .testimonial-card { flex-basis: 100%; }
+            .faq-question { font-size: 1em; padding: 15px 20px; }
+            .faq-answer { padding: 0 20px; }
+            .faq-answer p { padding-top: 10px; padding-bottom: 10px; }
+            .contact-content { flex-direction: column; gap: 30px; }
+            .contact-info, .contact-form-container { min-width: auto; }
+            .footer-content { flex-direction: column; gap: 15px; }
+            .footer-info, .footer-social { min-width: auto; text-align: center; }
+            .footer-social a { margin: 0 8px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section h1 { font-size: 1.8em; }
+            .hero-section p { font-size: 0.9em; }
+            .section h2 { font-size: 1.5em; }
+            .logo { font-size: 1.5em; }
+            .main-nav a { font-size: 0.9em; }
+            .btn-whats-nav { padding: 6px 12px; font-size: 0.9em; }
+        }
+    </style>
 </head>
 <body>
 
-    <section class="hero-section">
-        <div class="header-logo">
-            <span class="logo-text">Jéssica Soares <br> PSICÓLOGA</span>
-            </div>
-        <div class="container hero-content">
-            <div class="text-content">
-                <h1>Precisa de ajuda para enfrentar as dificuldades da vida?</h1>
-                <p>Olá, sou a Jéssica Soares, psicóloga.<br>Vamos conversar?</p>
-                <a href="#contact" class="button"><i class="far fa-calendar-alt"></i> Agende sua primeira consulta</a>
-            </div>
-            </div>
-    </section>
+    <header class="main-header">
+        <div class="container">
+            <a href="#hero" class="logo" aria-label="Jéssica S. Barbosa - Início">Jéssica S. Barbosa</a>
+            <nav class="main-nav" aria-label="Navegação Principal">
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#sobre">Sobre Mim</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#atendimento">Atendimento</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="https://wa.me/5583986309163" class="btn-whats-nav" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion('https://wa.me/5583986309163');"><i class="fab fa-whatsapp"></i> Agende Online</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
-        <section class="section about">
-            <div class="container about-content">
-                <div class="about-text">
-                    <h2>Sobre Mim</h2>
-                    <p>Sou Jéssica Soares, psicóloga com paixão por ajudar pessoas a encontrarem equilíbrio e clareza em suas vidas. Minha abordagem é baseada na escuta ativa, empatia e em técnicas comprovadas para promover o autoconhecimento e o desenvolvimento pessoal.</p>
-                    <p>Acredito que cada indivíduo é único e, por isso, construo um plano terapêutico personalizado, focado nas suas necessidades e objetivos. Juntos, podemos construir um caminho para uma vida mais plena e significativa.</p>
-                </div>
-                <div class="about-image">
-                    <img src="images/sua-foto-sobre-mim.jpg" alt="Foto de Jéssica Soares">
-                </div>
-            </div>
-        </section>
-
-        <section class="section services">
+        <section id="hero" class="hero-section">
             <div class="container">
-                <h2>Meus Serviços</h2>
-                <ul>
-                    <li>Terapia Individual (online e presencial)</li>
-                    <li>Aconselhamento Psicológico</li>
-                    <li>Orientação para o Desenvolvimento Pessoal</li>
-                    <li>Manejo de Estresse e Ansiedade</li>
-                </ul>
-                <p>Estou à disposição para atendimentos online, proporcionando flexibilidade e conforto para você iniciar sua terapia de onde estiver.</p>
-            </div>
+                <div class="hero-text-content">
+                    <h1>Psicóloga Clínica</h1>
+                    <span class="sub-title">Atendimentos em João Pessoa (PB) e Online em qualquer lugar do mundo</span>
+                    <p>Encontre um espaço de escuta, acolhimento e desenvolvimento. Através da **Terapia Cognitivo-Comportamental (TCC)**, você pode transformar desafios em crescimento pessoal.</p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion('https://wa.me/5583986309163');">
+                            <i class="fab fa-whatsapp"></i> Agende Sua Sessão
+                        </a>
+                        <a href="https://www.instagram.com/psicologia.jessicasoares" class="cta-button instagram-button" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i> Siga no Instagram
+                        </a>
+                    </div>
+                </div>
+                </div>
         </section>
 
-        <section class="section testimonials">
+        <hr class="section-divider" aria-hidden="true">
+
+        <section id="sobre" class="section light-bg">
             <div class="container">
-                <h2>O que dizem meus pacientes</h2>
-                <div class="testimonial-item">
-                    <p>"A Dra. Jéssica me ajudou a ver a vida de uma nova perspectiva. Seu acolhimento e profissionalismo fizeram toda a diferença na minha recuperação."</p>
-                    <span>- Cliente Satisfeito(a)</span>
-                </div>
-                <div class="testimonial-item">
-                    <p>"Ambiente muito acolhedor, a Dra. Jéssica é extremamente atenciosa e capacitada. Recomendo a todos que buscam apoio psicológico."</p>
-                    <span>- Outro Cliente</span>
+                <h2>Sobre Mim</h2>
+                <div class="about-content">
+                    <div class="about-image-container">
+                        <img src="https://raw.githubusercontent.com/psicojessicasoares/landing-page/main/Imagem%20do%20WhatsApp%20de%202025-02-22%20%C3%A0(s)%2001.53.39_dc7db975.jpg" alt="Retrato da Psicóloga Jéssica S. Barbosa">
+                    </div>
+                    <div class="about-text">
+                        <p>Olá! Meu nome é Jéssica S. Barbosa, psicóloga clínica com **CRP: 13/10484**. Minha paixão é facilitar a sua jornada em direção ao autoconhecimento, equilíbrio emocional e bem-estar.</p>
+                        <p>Com anos de experiência e dedicação, meu trabalho é oferecer um ambiente terapêutico seguro, ético e empático, onde você possa se sentir à vontade para explorar seus sentimentos, pensamentos e desafios, sem julgamentos.</p>
+                        <p>Minha abordagem principal é a **Terapia Cognitivo-Comportamental (TCC)**, uma metodologia comprovada e focada em resultados práticos. Juntos, vamos identificar padrões de pensamento e comportamento que geram sofrimento e desenvolver estratégias eficazes para você lidar com as adversidades da vida, construir resiliência e promover mudanças duradouras.</p>
+                        <p>Acredito profundamente no potencial de cada pessoa para superar obstáculos e encontrar sua própria força. Se você busca um caminho para viver com mais leveza, autoconfiança e propósito, estou aqui para caminhar com você.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section contact" id="contact">
+        <hr class="section-divider" aria-hidden="true">
+
+        <section id="localizacao" class="section">
+            <div class="container">
+                <h2>Localização Privilegiada</h2>
+                <div class="location-info">
+                    <p>Meu consultório está estrategicamente localizado no coração de João Pessoa, em **Miramar**, facilitando o acesso e a conveniência para você.</p>
+                    <p>Estamos situados entre as duas maiores avenidas da cidade, oferecendo facilidade de estacionamento e acesso por diversos meios de transporte.</p>
+                    <p>Um ambiente pensado para seu conforto e privacidade, ideal para o seu processo terapêutico.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Consult%C3%B3rio+de+psicologia+Miramar+Jo%C3%A3o+Pessoa+PB" class="map-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-map-marker-alt"></i> Ver no Mapa
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider" aria-hidden="true">
+
+        <section id="especialidades" class="section light-bg">
+            <div class="container">
+                <h2>Especialidades e Áreas de Atuação</h2>
+                <p>Através da Terapia Cognitivo-Comportamental (TCC), ofereço suporte especializado nas seguintes áreas:</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-frown-open"></i>
+                        <h3>Transtornos de Humor</h3>
+                        <p>Acompanhamento e estratégias para lidar com Depressão, Distimia e Bipolaridade, buscando o reestabelecimento do bem-estar e da qualidade de vida.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-hand-fist"></i>
+                        <h3>Transtornos de Ansiedade</h3>
+                        <p>Ferramentas para manejar Ansiedade Generalizada, Síndrome do Pânico, Fobias, Transtorno Obsessivo-Compulsivo (TOC) e Estresse.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Autoconhecimento</h3>
+                        <p>Processo de exploração interna para compreender seus pensamentos, emoções e comportamentos, promovendo clareza e fortalecimento pessoal.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Questões de Autoestima</h3>
+                        <p>Trabalho para fortalecer a autoimagem, a autoconfiança e o amor-próprio, construindo uma relação mais saudável consigo mesmo(a).</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Habilidades Sociais e Relacionamentos</h3>
+                        <p>Desenvolvimento de comunicação assertiva, resolução de conflitos e construção de relacionamentos mais saudáveis e satisfatórios.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-sad-cry"></i>
+                        <h3>Luto e Perdas</h3>
+                        <p>Apoio psicológico para lidar com o processo de luto, separações, mudanças significativas e outras formas de perdas emocionais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider" aria-hidden="true">
+
+        <section id="atendimento" class="section">
+            <div class="container">
+                <h2>Modalidades de Atendimento</h2>
+                <p>Escolha a modalidade que melhor se adapta às suas necessidades e rotina:</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>Atendimento Online</h3>
+                        <p>Conveniência e flexibilidade para você cuidar da sua saúde mental de qualquer lugar, com sessões por videochamada seguras e sigilosas.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-building"></i>
+                        <h3>Atendimento Presencial</h3>
+                        <p>Consultas no consultório em Miramar, João Pessoa - PB, para quem prefere o contato direto e um ambiente terapêutico dedicado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider" aria-hidden="true">
+
+        <section id="depoimentos" class="section light-bg">
+            <div class="container">
+                <h2>O Que Dizem Meus Pacientes</h2>
+                <div class="testimonials-container">
+                    <div class="testimonial-card">
+                        <p>"A Dra. Jéssica me ajudou a ver as coisas de uma perspectiva diferente e a encontrar a força que eu não sabia que tinha. Recomendo muito!"</p>
+                        <p>- J.S. - Maio/2024</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Um espaço de escuta e acolhimento. As sessões me proporcionaram um autoconhecimento profundo e muita clareza."</p>
+                        <p>- M.A. - Abril/2024</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Gratidão por cada sessão! Sinto que evoluí muito e agora tenho ferramentas para lidar melhor com os desafios. Profissional excelente."</p>
+                        <p>- P.R. - Março/2024</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Eu me sentia perdido e sobrecarregado, mas a terapia com a Jéssica me trouxe a clareza e a leveza que eu precisava. Um investimento na minha saúde mental."</p>
+                        <p>- L.F. - Fevereiro/2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider" aria-hidden="true">
+
+        <section id="faq" class="section">
+            <div class="container">
+                <h2>Perguntas Frequentes (FAQ)</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            O que é a Terapia Cognitivo-Comportamental (TCC)? <span class="icon fas fa-chevron-down"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>A TCC é uma abordagem terapêutica focada em identificar e modificar padrões de pensamento e comportamento disfuncionais. Ela ensina estratégias práticas para lidar com problemas e desenvolver novas formas de reagir a situações.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            A terapia online é tão eficaz quanto a presencial? <span class="icon fas fa-chevron-down"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim, diversas pesquisas demonstram que a terapia online pode ser tão eficaz quanto a presencial. A eficácia depende da conexão terapêutica e do engajamento do paciente. Oferece flexibilidade, comodidade e sigilo.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Qual a duração e a frequência das sessões? <span class="icon fas fa-chevron-down"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>As sessões geralmente duram 50 minutos e a frequência usual é semanal, especialmente no início do tratamento. A duração total da terapia varia de acordo com as necessidades e objetivos de cada paciente.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Posso usar convênio ou plano de saúde? <span class="icon fas fa-chevron-down"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Não trabalho diretamente com convênios. No entanto, emito recibo para reembolso. Verifique com seu plano de saúde as condições e valores de reembolso para sessões de psicologia.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            O que devo fazer antes da primeira sessão? <span class="icon fas fa-chevron-down"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Para a primeira sessão, procure um local tranquilo e privado onde não será interrompido(a). Certifique-se de que sua conexão de internet está estável e que seus dispositivos (computador/celular) estão carregados. Estarei esperando você!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider" aria-hidden="true">
+
+        <section id="contato" class="section light-bg">
             <div class="container">
                 <h2>Entre em Contato</h2>
-                <p>Estou pronta para te ajudar. Agende sua primeira consulta ou tire suas dúvidas.</p>
-                <a href="https://wa.me/SEUNUMERO" target="_blank" class="button whatsapp-button">
-                    <i class="fab fa-whatsapp"></i> Fale Comigo Pelo WhatsApp
-                </a>
-                <p class="email-info">Ou envie um e-mail para: <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></p>
+                <p style="max-width: 600px; margin: 0 auto 30px auto; color: #555;">Estou aqui para te ouvir. Agende uma conversa para tirar suas dúvidas e dar o primeiro passo em direção ao seu bem-estar.</p>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Informações de Contato</h3>
+                        <p><i class="fas fa-whatsapp"></i> WhatsApp: (83) 98630-9163</p>
+                        <p><i class="fas fa-envelope"></i> E-mail: psicologa.jessicasoares@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Endereço: Consultório em Miramar, João Pessoa - PB</p>
+                        <p><i class="fas fa-phone"></i> Telefone: (83) 98630-9163</p>
+
+                        <h3 style="margin-top: 30px;">Horário de Atendimento</h3>
+                        <p><i class="far fa-clock"></i> Segunda a Sexta: 09:00 - 18:00</p>
+                        <p><i class="far fa-clock"></i> Sábados: 09:00 - 12:00 (apenas online)</p>
+                    </div>
+                    <div class="contact-form-container">
+                        <h3>Envie uma Mensagem</h3>
+                        <form action="https://formspree.io/f/myzjergl" method="POST">
+                            <label for="name">Nome Completo:</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="email">Seu E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="phone">Telefone (opcional):</label>
+                            <input type="text" id="phone" name="phone">
+
+                            <label for="message">Sua Mensagem:</label>
+                            <textarea id="message" name="message" required></textarea>
+
+                            <button type="submit">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
-    </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Dra. Jéssica Soares. Todos os direitos reservados.</p>
-            <p>Design inspirado no modelo fornecido.</p>
+    </main>
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p><strong>Jéssica S. Barbosa</strong> | Psicóloga Clínica</p>
+                <p>CRP: 13/10484 | Consultório em Miramar, João Pessoa - PB</p>
+                <p>E-mail: psicologa.jessicasoares@gmail.com | Tel/WhatsApp: (83) 98630-9163</p>
+                <p>© 2025 Todos os direitos reservados. <a href="/politica-de-privacidade">Política de Privacidade</a> | <a href="/termos-de-uso">Termos de Uso</a></p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/psicologia.jessicasoares" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Psicóloga Jéssica S. Barbosa"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.closest('.faq-item');
+                    faqItem.classList.toggle('active');
+                    const answer = faqItem.querySelector('.faq-answer');
+                    if (faqItem.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + "px"; // Ajusta a altura com base no conteúdo
+                        answer.style.paddingTop = "20px";
+                        answer.style.paddingBottom = "20px";
+                    } else {
+                        answer.style.maxHeight = null;
+                        answer.style.paddingTop = "0";
+                        answer.style.paddingBottom = "0";
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
