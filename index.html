@@ -23,7 +23,7 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'AW-16890450366'); // Google Ads ID
-        gtag('config', 'G-7SSF4QG6QD');     // Google Analytics 4 ID
+        gtag('config', 'G-7SSF4QG6QD');    // Google Analytics 4 ID
     </script>
 
     <script>
@@ -42,64 +42,356 @@
     </script>
 
     <style>
-        body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; color: #3a3a3a; background-color: #f9f9f9; line-height: 1.7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; color: #2c3e50; font-weight: 700; margin-top: 0; margin-bottom: 20px; }
-        p { margin-bottom: 1em; }
-        a { text-decoration: none; color: inherit; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        /* Definição de variáveis de cores */
+        :root {
+            --primary-purple: #7B68EE; /* Um roxo suave, similar ao da imagem */
+            --secondary-orange: #FF8C00; /* Um laranja vibrante para o CTA */
+            --text-color-dark: #333;
+            --text-color-light: #F8F8F8; /* Quase branco para texto em fundos escuros */
+            --light-bg: #F8F8F8; /* Fundo suave para seções brancas */
+            --white: #FFFFFF;
+        }
 
-        /* Header */
-        .main-header { background-color: #fff; padding: 15px 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; }
-        .main-header .container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.8em; font-weight: 800; color: #4caf50; line-height: 1; }
-        .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 25px; }
-        .main-nav a { color: #555; font-weight: 500; transition: color 0.3s ease; white-space: nowrap; }
-        .main-nav a:hover { color: #4caf50; }
-        .btn-whats-nav { background-color: #4caf50; color: #fff !important; padding: 8px 18px; border-radius: 5px; font-weight: 600; transition: background-color 0.3s ease, transform 0.2s ease; margin-left: 20px; box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3); }
-        .btn-whats-nav:hover { background-color: #388e3c; transform: translateY(-1px); }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color-dark);
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-        /* Hero Section */
-        .hero-section { background-color: #f0f4f7; color: #2c3e50; text-align: center; padding: 120px 20px 100px; margin-top: 80px; position: relative; }
-        .hero-section h1 { font-size: 3.2em; color: #2c3e50; max-width: 900px; line-height: 1.2; margin: 0 auto 25px auto; font-weight: 800; }
-        .hero-section p { font-size: 1.3em; color: #555; max-width: 800px; margin: 0 auto 40px auto; }
-        .cta-button { display: inline-block; background-color: #4caf50; color: #fff !important; padding: 16px 40px; text-decoration: none; font-weight: 700; border-radius: 50px; font-size: 1.15em; transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; box-shadow: 0 5px 20px rgba(76, 175, 80, 0.4); }
-        .cta-button:hover { background-color: #388e3c; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(76, 175, 80, 0.5); }
+        .container {
+            max-width: 1080px; /* Um pouco mais largo para seções */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Header / Navegação --- */
+        .main-header {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8em;
+            font-weight: 800;
+            color: var(--primary-purple); /* Usando a cor primária */
+            line-height: 1;
+            text-decoration: none; /* Remover sublinhado do link do logo */
+        }
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+        }
+        .main-nav a {
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+            text-decoration: none; /* Remover sublinhado dos links de navegação */
+        }
+        .main-nav a:hover {
+            color: var(--primary-purple); /* Usando a cor primária */
+        }
+        .btn-whats-nav {
+            background-color: #25D366; /* Cor do WhatsApp */
+            color: #fff !important;
+            padding: 8px 18px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-left: 20px;
+            box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+            text-decoration: none;
+        }
+        .btn-whats-nav:hover {
+            background-color: #1DA851; /* Tom mais escuro */
+            transform: translateY(-1px);
+        }
+
+        /* --- Hero Section (Capa) --- */
+        .hero-section {
+            background-color: var(--primary-purple); /* Fundo roxo sólido */
+            color: var(--text-color-light);
+            text-align: center; /* Centraliza o conteúdo */
+            padding: 120px 20px 100px;
+            margin-top: 80px; /* Para não ficar embaixo do header fixo */
+            position: relative;
+            background-image: url('https://raw.githubusercontent.com/psicojessicasoares/landing-page/main/foto%20profissional.png'); /* **Mude para o caminho da sua imagem!** */
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            background-position: right center;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-section .container {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            position: relative;
+            z-index: 5;
+            text-align: left;
+        }
+
+        .hero-text-content {
+            flex: 1; /* Permite que o texto ocupe o espaço restante */
+            max-width: 60%; /* Ajusta a largura do texto para não colidir com a imagem */
+            padding-right: 20px; /* Espaçamento da imagem */
+        }
+
+        .hero-section h1 {
+            font-size: 3.2em;
+            color: var(--text-color-light);
+            line-height: 1.2;
+            margin: 0 0 25px 0;
+            font-weight: 800;
+            font-style: italic;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-section p {
+            font-size: 1.3em;
+            color: var(--text-color-light);
+            margin: 0 0 40px 0;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px; /* Espaçamento entre os botões */
+            flex-wrap: wrap; /* Para quebrar em linha em telas menores */
+            justify-content: flex-start; /* Alinha à esquerda */
+        }
+
+        .cta-button {
+            display: inline-flex; /* Para alinhar ícone e texto */
+            align-items: center;
+            background-color: var(--secondary-orange); /* Laranja vibrante */
+            color: #fff !important;
+            padding: 16px 35px; /* Ajustado */
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 50px;
+            font-size: 1.15em;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(255, 140, 0, 0.4); /* Sombra com cor do botão */
+        }
+        .cta-button i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        .cta-button:hover {
+            background-color: #E67E22; /* Tom mais escuro no hover */
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 140, 0, 0.5);
+        }
+
+        .instagram-button {
+            background-color: #E1306C; /* Cor do Instagram */
+            color: #fff !important;
+            box-shadow: 0 5px 20px rgba(225, 48, 108, 0.4);
+        }
+        .instagram-button:hover {
+            background-color: #C13584; /* Tom mais escuro do Instagram */
+            box-shadow: 0 8px 25px rgba(225, 48, 108, 0.5);
+        }
 
         /* General Sections */
         .section { padding: 80px 0; text-align: center; }
-        .section.light-bg { background-color: #f0f4f7; }
-        .section h2 { font-size: 2.6em; margin-bottom: 40px; font-weight: 700; color: #2c3e50; }
+        .section.light-bg { background-color: var(--light-bg); }
+        .section h2 { 
+            font-size: 2.6em; 
+            margin-bottom: 40px; 
+            font-weight: 700; 
+            color: var(--primary-purple); /* Títulos das seções com a cor primária */
+            position: relative;
+            display: inline-block;
+        }
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 80px; /* Linha de destaque um pouco maior */
+            height: 4px; /* Mais grossa */
+            background-color: var(--secondary-orange); /* Usando a cor do CTA para o destaque */
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+        .section p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            color: #555;
+        }
 
         /* About Section */
-        .about-content { display: flex; flex-wrap: wrap; align-items: center; gap: 60px; text-align: left; }
-        .about-image, .about-text { flex: 1; min-width: 300px; }
-        .about-image img { max-width: 300px; height: auto; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); display: block; margin: 0 auto 20px auto; }
-        .about-text p { font-size: 1.1em; color: #555; margin-bottom: 1.5em; }
+        .about-content { 
+            display: flex; 
+            flex-wrap: wrap; 
+            align-items: center; 
+            justify-content: center; /* Centraliza conteúdo em telas menores */
+            gap: 60px; 
+            text-align: left; 
+        }
+        .about-image-container {
+            flex-shrink: 0; /* Não encolhe */
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin: 0 auto 20px auto; /* Centraliza em mobile */
+        }
+        .about-image-container img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            display: block; 
+        }
+        .about-text { 
+            flex: 1; 
+            min-width: 300px; 
+            max-width: 700px; /* Limita largura do texto para melhor leitura */
+        }
+        .about-text p { font-size: 1.1em; color: #555; margin-bottom: 1.5em; text-align: justify; }
+
+        /* Location Section */
+        .location-info {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .location-info p {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .location-info .map-link {
+            display: inline-block;
+            background-color: var(--primary-purple);
+            color: var(--white) !important;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 15px;
+        }
+        .location-info .map-link i {
+            margin-right: 8px;
+        }
+        .location-info .map-link:hover {
+            background-color: #6a5acd;
+            transform: translateY(-2px);
+        }
 
         /* Service/Specialties Cards */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: left; margin-top: 50px; }
-        .service-card { background-color: #fff; padding: 35px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
+        .service-card { 
+            background-color: #fff; 
+            padding: 35px; 
+            border-radius: 10px; 
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            height: 100%; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: flex-start; 
+            align-items: flex-start; 
+        }
         .service-card:hover { transform: translateY(-7px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); }
-        .service-card i { font-size: 3em; color: #4caf50; margin-bottom: 20px; display: block; }
+        .service-card i { font-size: 3em; color: var(--primary-purple); /* Cor dos ícones */ margin-bottom: 20px; display: block; }
         .service-card h3 { font-size: 1.5em; margin-bottom: 12px; color: #2c3e50; font-weight: 600; }
         .service-card p { font-size: 1em; color: #666; flex-grow: 1; }
 
         /* Testimonials */
         .testimonials-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
-        .testimonial-card { background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); max-width: 380px; text-align: left; flex-basis: calc(33.333% - 20px); flex-grow: 1; flex-shrink: 1; min-width: 280px; }
-        .testimonial-card p:first-of-type { font-style: italic; font-size: 1.1em; color: #555; margin-bottom: 15px; position: relative; padding-left: 20px; }
-        .testimonial-card p:first-of-type::before { content: "\201C"; font-size: 3em; color: #4caf50; position: absolute; left: 0; top: -10px; opacity: 0.5; }
-        .testimonial-card p:last-child { font-weight: 700; margin-top: 0; text-align: right; font-style: normal; color: #333; }
+        .testimonial-card { 
+            background-color: #fff; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); 
+            max-width: 380px; 
+            text-align: left; 
+            flex-basis: calc(33.333% - 20px); 
+            flex-grow: 1; 
+            flex-shrink: 1; 
+            min-width: 280px; 
+        }
+        .testimonial-card p:first-of-type { 
+            font-style: italic; 
+            font-size: 1.1em; 
+            color: #555; 
+            margin-bottom: 15px; 
+            position: relative; 
+            padding-left: 20px; 
+        }
+        .testimonial-card p:first-of-type::before { 
+            content: "\201C"; 
+            font-size: 3em; 
+            color: var(--primary-purple); /* Cor das aspas */ 
+            position: absolute; 
+            left: 0; 
+            top: -10px; 
+            opacity: 0.5; 
+        }
+        .testimonial-card p:last-child { 
+            font-weight: 700; 
+            margin-top: 0; 
+            text-align: right; 
+            font-style: normal; 
+            color: #333; 
+        }
 
         /* FAQ */
         .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
         .faq-item { background-color: #fff; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05); overflow: hidden; }
-        .faq-question { padding: 20px 25px; background-color: #fff; color: #2c3e50; font-weight: 600; font-size: 1.1em; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; transition: background-color 0.3s ease; }
+        .faq-question { 
+            padding: 20px 25px; 
+            background-color: #fff; 
+            color: #2c3e50; 
+            font-weight: 600; 
+            font-size: 1.1em; 
+            cursor: pointer; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1px solid #eee; 
+            transition: background-color 0.3s ease; 
+        }
         .faq-question:hover { background-color: #f5f5f5; }
         .faq-question .icon { font-size: 1em; transition: transform 0.3s ease; }
-        .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.4s ease-out; color: #555; }
+        .faq-answer { 
+            padding: 0 25px; 
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out; 
+            color: #555; 
+        }
         .faq-answer p { padding-top: 15px; padding-bottom: 15px; margin: 0; }
-        .faq-item.active .faq-question { background-color: #e8f5e9; border-bottom: 1px solid #4caf50; }
+        .faq-item.active .faq-question { background-color: #e8f5e9; border-bottom: 1px solid var(--primary-purple); } /* Cor na FAQ ativa */
         .faq-item.active .faq-question .icon { transform: rotate(180deg); }
         .faq-item.active .faq-answer { max-height: 200px; padding-top: 20px; padding-bottom: 20px; } /* Ajuste max-height conforme o maior texto */
 
@@ -107,54 +399,114 @@
         .contact-content { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; text-align: left; max-width: 900px; margin: 0 auto; }
         .contact-info, .contact-form-container { flex: 1; min-width: 300px; }
         .contact-info p { font-size: 1.1em; margin-bottom: 15px; color: #555; }
-        .contact-info i { color: #4caf50; margin-right: 10px; font-size: 1.2em; }
+        .contact-info i { color: var(--primary-purple); /* Cor dos ícones de contato */ margin-right: 10px; font-size: 1.2em; }
         .contact-form-container { background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); }
         .contact-form-container h3 { text-align: center; margin-bottom: 25px; color: #2c3e50; font-size: 1.8em; }
         .contact-form-container form label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
-        .contact-form-container form input[type="text"], .contact-form-container form input[type="email"], .contact-form-container form textarea { width: calc(100% - 20px); padding: 12px 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; font-size: 1em; color: #3a3a3a; transition: border-color 0.3s ease; }
-        .contact-form-container form input[type="text"]:focus, .contact-form-container form input[type="email"]:focus, .contact-form-container form textarea:focus { border-color: #4caf50; outline: none; box-shadow: 0 0 5px rgba(76, 175, 80, 0.3); }
+        .contact-form-container form input[type="text"], .contact-form-container form input[type="email"], .contact-form-container form textarea { 
+            width: calc(100% - 20px); 
+            padding: 12px 10px; 
+            margin-bottom: 20px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+            font-family: inherit; 
+            font-size: 1em; 
+            color: #3a3a3a; 
+            transition: border-color 0.3s ease; 
+        }
+        .contact-form-container form input[type="text"]:focus, .contact-form-container form input[type="email"]:focus, .contact-form-container form textarea:focus { 
+            border-color: var(--primary-purple); /* Cor da borda no foco */ 
+            outline: none; 
+            box-shadow: 0 0 5px rgba(123, 104, 238, 0.3); 
+        }
         .contact-form-container form textarea { resize: vertical; min-height: 100px; }
-        .contact-form-container form button { display: block; width: 100%; background-color: #4caf50; color: #fff; padding: 15px 25px; border: none; border-radius: 5px; font-size: 1.1em; font-weight: 700; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s; box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4); }
-        .contact-form-container form button:hover { background-color: #388e3c; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(76, 175, 80, 0.5); }
+        .contact-form-container form button { 
+            display: block; 
+            width: 100%; 
+            background-color: var(--primary-purple); /* Cor do botão de enviar */ 
+            color: #fff; 
+            padding: 15px 25px; 
+            border: none; 
+            border-radius: 5px; 
+            font-size: 1.1em; 
+            font-weight: 700; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease, transform 0.2s; 
+            box-shadow: 0 4px 15px rgba(123, 104, 238, 0.4); 
+        }
+        .contact-form-container form button:hover { 
+            background-color: #6a5acd; /* Tom mais escuro no hover */ 
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 20px rgba(123, 104, 238, 0.5); 
+        }
 
         /* Footer */
-        .main-footer { background-color: #2c3e50; color: #ecf0f1; padding: 40px 0; text-align: center; font-size: 0.9em; }
+        .main-footer { 
+            background-color: #2c3e50; /* Fundo escuro para o rodapé */ 
+            color: #ecf0f1; 
+            padding: 40px 0; 
+            text-align: center; 
+            font-size: 0.9em; 
+        }
         .footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
         .footer-info, .footer-social { flex: 1; min-width: 250px; text-align: left; }
         .footer-social { text-align: right; }
         .footer-social a { color: #fff; font-size: 1.5em; margin: 0 10px; transition: color 0.3s ease; }
-        .footer-social a:hover { color: #4caf50; }
+        .footer-social a:hover { color: var(--primary-purple); /* Cor de destaque no hover */ }
 
         /* Section Divider */
         .section-divider { border: 0; height: 1px; background-color: #eee; margin: 0; }
 
         /* Responsiveness */
         @media (max-width: 992px) {
+            .main-header .container { flex-direction: column; gap: 10px; padding: 10px 15px; align-items: center; }
+            .main-nav { width: 100%; text-align: center; }
+            .main-nav ul { flex-direction: column; align-items: center; gap: 8px; margin: 0 auto; }
+            .btn-whats-nav { margin-left: 0; margin-top: 10px; }
+
+            .hero-section {
+                height: auto; /* Altura flexível em telas menores */
+                background-size: cover; /* Ajusta a imagem para cobrir melhor */
+                background-position: center bottom; /* Ajusta a imagem para mostrar mais da pessoa */
+                padding-top: 160px; /* Mais espaço para o header fixo */
+                padding-bottom: 60px;
+                margin-top: 0; /* Remove margem superior pois padding-top já cuida do espaçamento */
+            }
+            .hero-section .container {
+                flex-direction: column; /* Conteúdo do hero em coluna */
+                text-align: center; /* Centraliza o texto */
+            }
+            .hero-text-content {
+                max-width: 90%; /* Aumenta a largura do texto em telas médias */
+                padding-right: 0;
+            }
+            .hero-section h1, .hero-section p {
+                margin-left: auto; /* Centraliza */
+                margin-right: auto; /* Centraliza */
+            }
             .hero-section h1 { font-size: 2.8em; }
             .hero-section p { font-size: 1.1em; }
+            .hero-buttons { justify-content: center; /* Centraliza botões em mobile */ }
+            .cta-button, .instagram-button { width: 80%; max-width: 350px; } /* Botões maiores em mobile */
+
+
             .section h2 { font-size: 2.2em; }
-            .about-content { gap: 30px; }
+            .about-content { gap: 30px; flex-direction: column; text-align: center; }
+            .about-image-container { order: -1; min-width: auto; max-width: 80%; margin: 0 auto; }
+            .about-image-container img { border-radius: 50%; width: 300px; height: auto; object-fit: cover; }
+            .about-text { min-width: auto; }
             .services-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
             .testimonial-card { flex-basis: calc(50% - 15px); }
-            .after-about-section-image { max-width: 700px; } /* Ajuste */
         }
 
         @media (max-width: 768px) {
             .section { padding: 40px 15px; }
             .section h2 { font-size: 1.8em; margin-bottom: 30px; }
             .container { padding: 0 15px; }
-            .main-header .container { flex-direction: column; gap: 10px; padding: 10px 15px; align-items: center; }
-            .main-nav { width: 100%; text-align: center; }
-            .main-nav ul { flex-direction: column; align-items: center; gap: 8px; margin: 0 auto; }
-            .btn-whats-nav { margin-left: 0; margin-top: 10px; }
-            .hero-section { padding-top: 160px; padding-bottom: 60px; margin-top: 0; }
             .hero-section h1 { font-size: 2.4em; }
             .hero-section p { font-size: 1em; }
-            .cta-button { padding: 12px 30px; font-size: 1em; }
-            .about-content { flex-direction: column; text-align: center; gap: 30px; }
-            .about-image { order: -1; min-width: auto; max-width: 80%; margin: 0 auto; }
-            .about-image img { border-radius: 50%; width: 300px; height: auto; object-fit: cover; }
-            .about-text { min-width: auto; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .cta-button, .instagram-button { width: 90%; }
             .services-grid { grid-template-columns: 1fr; gap: 20px; }
             .service-card { padding: 25px; }
             .testimonial-card { flex-basis: 100%; }
@@ -163,7 +515,6 @@
             .faq-answer p { padding-top: 10px; padding-bottom: 10px; }
             .contact-content { flex-direction: column; gap: 30px; }
             .contact-info, .contact-form-container { min-width: auto; }
-            .after-about-section-image { max-width: 100%; border-radius: 8px; } /* Ajuste para retangular no mobile */
             .footer-content { flex-direction: column; gap: 15px; }
             .footer-info, .footer-social { min-width: auto; text-align: center; }
             .footer-social a { margin: 0 8px; }
@@ -187,7 +538,8 @@
             <nav class="main-nav" aria-label="Navegação Principal">
                 <ul>
                     <li><a href="#hero">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#sobre">Sobre Mim</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
                     <li><a href="#especialidades">Especialidades</a></li>
                     <li><a href="#atendimento">Atendimento</a></li>
                     <li><a href="#depoimentos">Depoimentos</a></li>
@@ -202,9 +554,18 @@
     <main>
         <section id="hero" class="hero-section">
             <div class="container">
-                <h1>Sua Jornada para o Bem-Estar Começa Aqui.</h1>
-                <p>Um espaço seguro e acolhedor para você encontrar clareza, superar desafios e florescer.</p>
-                <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion('https://wa.me/5583986309163');">Agende sua Primeira Conversa</a>
+                <div class="hero-text-content">
+                    <h1>Bem-Vindo(a) à Sua Jornada de Bem-Estar!</h1>
+                    <p>Encontre um espaço de escuta, acolhimento e desenvolvimento. Com a psicologia, você pode transformar desafios em crescimento pessoal.</p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion('https://wa.me/5583986309163');">
+                            <i class="fab fa-whatsapp"></i> Agende Sua Sessão
+                        </a>
+                        <a href="https://www.instagram.com/psicologia.jessicasoares" class="cta-button instagram-button" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i> Siga no Instagram
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -214,14 +575,14 @@
             <div class="container">
                 <h2>Sobre Mim</h2>
                 <div class="about-content">
+                    <div class="about-image-container">
+                        <img src="https://raw.githubusercontent.com/psicojessicasoares/landing-page/main/foto%20profissional.png" alt="Retrato da Psicóloga Jéssica S. Barbosa">
+                    </div>
                     <div class="about-text">
                         <p>Olá! Meu nome é Jéssica S. Barbosa, psicóloga clínica com **CRP: 13/10484**. Minha paixão é facilitar a sua jornada em direção ao autoconhecimento, equilíbrio emocional e bem-estar.</p>
                         <p>Com anos de experiência e dedicação, meu trabalho é oferecer um ambiente terapêutico seguro, ético e empático, onde você possa se sentir à vontade para explorar seus sentimentos, pensamentos e desafios, sem julgamentos.</p>
                         <p>Minha abordagem principal é a **Terapia Cognitivo-Comportamental (TCC)**, uma metodologia comprovada e focada em resultados práticos. Juntos, vamos identificar padrões de pensamento e comportamento que geram sofrimento e desenvolver estratégias eficazes para você lidar com as adversidades da vida, construir resiliência e promover mudanças duradouras.</p>
                         <p>Acredito profundamente no potencial de cada pessoa para superar obstáculos e encontrar sua própria força. Se você busca um caminho para viver com mais leveza, autoconfiança e propósito, estou aqui para caminhar com você.</p>
-                    </div>
-                    <div class="about-image">
-                        <img src="https://raw.githubusercontent.com/psicojessicasoares/landing-page/main/foto%20profissional.png" alt="Retrato da Psicóloga Jéssica S. Barbosa">
                     </div>
                 </div>
             </div>
@@ -229,7 +590,23 @@
 
         <hr class="section-divider" aria-hidden="true">
 
-        <section id="especialidades" class="section">
+        <section id="localizacao" class="section">
+            <div class="container">
+                <h2>Localização Privilegiada</h2>
+                <div class="location-info">
+                    <p>Meu consultório está estrategicamente localizado no coração de João Pessoa, em **Miramar**, facilitando o acesso e a conveniência para você.</p>
+                    <p>Estamos situados entre as duas maiores avenidas da cidade, oferecendo facilidade de estacionamento e acesso por diversos meios de transporte.</p>
+                    <p>Um ambiente pensado para seu conforto e privacidade, ideal para o seu processo terapêutico.</p>
+                    <a href="https://www.google.com/maps/search/consult%C3%B3rio+psicologia+miramar+jo%C3%A3o+pessoa" class="map-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-map-marker-alt"></i> Ver no Mapa
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider" aria-hidden="true">
+
+        <section id="especialidades" class="section light-bg">
             <div class="container">
                 <h2>Especialidades e Áreas de Atuação</h2>
                 <p>Através da Terapia Cognitivo-Comportamental (TCC), ofereço suporte especializado nas seguintes áreas:</p>
@@ -270,7 +647,7 @@
 
         <hr class="section-divider" aria-hidden="true">
 
-        <section id="atendimento" class="section light-bg">
+        <section id="atendimento" class="section">
             <div class="container">
                 <h2>Modalidades de Atendimento</h2>
                 <p>Escolha a modalidade que melhor se adapta às suas necessidades e rotina:</p>
@@ -291,7 +668,7 @@
 
         <hr class="section-divider" aria-hidden="true">
 
-        <section id="depoimentos" class="section">
+        <section id="depoimentos" class="section light-bg">
             <div class="container">
                 <h2>O Que Dizem Meus Pacientes</h2>
                 <div class="testimonials-container">
@@ -317,7 +694,7 @@
 
         <hr class="section-divider" aria-hidden="true">
 
-        <section id="faq" class="section light-bg">
+        <section id="faq" class="section">
             <div class="container">
                 <h2>Perguntas Frequentes (FAQ)</h2>
                 <div class="faq-container">
@@ -371,7 +748,7 @@
 
         <hr class="section-divider" aria-hidden="true">
 
-        <section id="contato" class="section">
+        <section id="contato" class="section light-bg">
             <div class="container">
                 <h2>Entre em Contato</h2>
                 <p style="max-width: 600px; margin: 0 auto 30px auto; color: #555;">Estou aqui para te ouvir. Agende uma conversa para tirar suas dúvidas e dar o primeiro passo em direção ao seu bem-estar.</p>
