@@ -130,28 +130,29 @@
         .hero-section {
             background-color: var(--primary-purple); /* Fundo roxo sólido */
             color: var(--text-color-light);
-            padding: 120px 20px 100px;
-            /* Ajuste o margin-top para ser ligeiramente maior que a altura do header fixo para desktop */
-            margin-top: 80px; 
+            padding: 160px 20px 140px; /* Aumentei um pouco o padding vertical agora que não tem imagem */
+            margin-top: 100px; /* Garante que não sobreponha o header fixo */
             position: relative;
-            display: flex; /* Habilitar flexbox para alinhar texto e imagem */
-            align-items: center; /* Alinhar verticalmente ao centro */
-            justify-content: space-between; /* Espaço entre texto e imagem */
+            display: flex; /* Manter flex para centralizar o conteúdo horizontalmente se precisar */
+            align-items: center; /* Centralizar verticalmente */
+            justify-content: center; /* Centralizar horizontalmente o texto e botões */
             overflow: hidden;
+            text-align: center; /* Centralizar o texto dentro do hero-text-content */
         }
 
         .hero-text-content {
-            flex: 1; /* Ocupa o espaço disponível */
-            max-width: 60%; /* Adjusted for more space for text */
-            padding-right: 20px; /* Space between text and image */
-            text-align: left; /* Aligns text to the left */
+            /* flex: 1; Remova o flex, agora ele pode ocupar a largura total */
+            max-width: 80%; /* Ajuste a largura máxima do texto para não ficar muito esticado */
+            padding-right: 0; /* Remova o padding direito, já que não tem imagem */
+            text-align: center; /* Garante que o texto interno esteja centralizado */
+            margin: 0 auto; /* Centraliza o bloco de texto na tela */
         }
 
         .hero-text-content h1 {
             font-size: 3.2em;
             color: var(--text-color-light); /* Cor branca para o texto */
             line-height: 1.2;
-            margin: 0 0 5px 0; /* Menos margem abaixo do título principal */
+            margin: 0 auto 20px auto; /* Centraliza o título e adiciona margem abaixo */
             font-weight: 800;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra para o texto para dar destaque */
         }
@@ -159,21 +160,23 @@
         .hero-text-content .sub-title {
             font-size: 1.1em; /* Tamanho discreto para a nova linha */
             color: rgba(255, 255, 255, 0.8); /* Cor mais clara para discreto */
-            margin-bottom: 20px; /* Espaçamento abaixo do subtítulo */
+            margin-bottom: 30px; /* Espaçamento abaixo do subtítulo */
             display: block; /* Garante que fique em uma nova linha */
         }
 
         .hero-section p {
             font-size: 1.3em;
             color: var(--text-color-light); /* Cor branca para o texto */
-            margin: 0 0 40px 0;
+            margin: 0 auto 40px auto; /* Centraliza o parágrafo */
+            max-width: 700px; /* Limita a largura do parágrafo para melhor leitura */
             text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Sombra para o texto para dar destaque */
         }
 
         .hero-buttons {
             display: flex;
-            gap: 20px; /* Espaçamento entre os botões */
-            flex-wrap: wrap; /* Para quebrar em linha em telas menores */
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center; /* Centraliza os botões */
         }
 
         .cta-button {
@@ -209,25 +212,8 @@
             box-shadow: 0 8px 25px rgba(225, 48, 108, 0.5);
         }
 
-        .hero-image-container {
-            flex-shrink: 0; /* Não encolhe */
-            width: 300px; /* Largura desejada da imagem */
-            height: 300px; /* Fixed height for square image */
-            border-radius: 0; /* Make it square */
-            overflow: hidden;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
-            margin-left: 40px; /* Espaço entre o texto e a imagem */
-            display: flex; /* Use flexbox to center image if it doesn't fill */
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image-container img {
-            width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: cover; /* Cobrir o contêiner, pode cortar as bordas */
-        }
+        /* Remover as regras de .hero-image-container se a imagem foi removida do HTML */
+        /* .hero-image-container foi removido do HTML e as regras abaixo não são mais necessárias */
 
         /* General Sections */
         .section { padding: 80px 0; text-align: center; }
@@ -277,8 +263,8 @@
         .about-image-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
             display: block;
+            object-fit: cover;
         }
         .about-text {
             flex: 1;
@@ -479,12 +465,10 @@
             .btn-whats-nav { margin-left: 0; margin-top: 10px; }
 
             .hero-section {
-                flex-direction: column; /* Empilha texto e imagem */
+                flex-direction: column; /* Empilha texto e botões */
                 text-align: center; /* Centraliza o conteúdo */
                 align-items: center;
-                /* Ajuste o padding-top para mobile, considerando a altura do header fixo. */
-                /* A altura do header pode variar, um valor um pouco maior garante que não sobreponha */
-                padding-top: 120px; /* Reduzindo um pouco do 160px anterior que pode ser alto demais */
+                padding-top: 160px; /* Mantém espaço para o header fixo */
                 padding-bottom: 60px; /* Garante espaço na parte inferior */
             }
             .hero-text-content {
@@ -493,13 +477,8 @@
                 text-align: center; /* Centraliza o texto */
                 margin-bottom: 30px; /* Adiciona espaço abaixo do bloco de texto */
             }
-            .hero-image-container {
-                margin-left: 0;
-                margin-bottom: 30px; /* Adiciona espaço abaixo da imagem */
-                max-width: 70%; /* Controla o tamanho da imagem em tablets */
-                width: 250px; /* Largura mais específica para a imagem em mobile */
-                height: 250px; /* Mantém a altura igual à largura para quadrado */
-            }
+            /* .hero-image-container não existe mais no HTML */
+
             .hero-buttons {
                 justify-content: center;
                 flex-direction: column; /* Empilha os botões */
@@ -518,8 +497,7 @@
             .section h2 { font-size: 1.8em; margin-bottom: 30px; }
             .container { padding: 0 15px; }
             .hero-section {
-                /* Ajuste o padding-top para telas de celular, pode ser mais ajustado ainda */
-                padding-top: 100px; /* Um valor que geralmente funciona bem para a maioria dos cabeçalhos fixos em mobile */
+                padding-top: 140px; /* Ajuste para telas menores */
                 padding-bottom: 50px;
             }
             .hero-text-content h1 {
@@ -529,11 +507,7 @@
                 font-size: 0.9em;
             }
             .hero-section p { font-size: 1em; }
-            .hero-image-container {
-                width: 200px; /* Reduz ainda mais a imagem para celulares */
-                height: 200px;
-                margin-bottom: 25px;
-            }
+            /* .hero-image-container não existe mais no HTML */
             .cta-button, .instagram-button {
                 width: 90%; /* Ocupa mais largura em celulares */
                 margin-bottom: 10px;
@@ -598,10 +572,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="hero-image-container">
-                    <img src="https://raw.githubusercontent.com/psicojessicasoares/landing-page/main/Imagem%20do%20WhatsApp%20de%202025-02-22%20%C3%A0(s)%2001.53.39_dc7db975.jpg" alt="Retrato da Psicóloga Jéssica S. Barbosa">
                 </div>
-            </div>
         </section>
 
         <hr class="section-divider" aria-hidden="true">
