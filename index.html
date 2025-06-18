@@ -152,7 +152,6 @@
             line-height: 1.2;
             margin: 0 0 5px 0; /* Menos margem abaixo do título principal */
             font-weight: 800;
-            /* font-style: italic; */ /* Removido itálico conforme a imagem mais recente */
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra para o texto para dar destaque */
         }
 
@@ -162,7 +161,6 @@
             margin-bottom: 20px; /* Espaçamento abaixo do subtítulo */
             display: block; /* Garante que fique em uma nova linha */
         }
-
 
         .hero-section p {
             font-size: 1.3em;
@@ -483,33 +481,34 @@
                 flex-direction: column; /* Empilha texto e imagem */
                 text-align: center; /* Centraliza o conteúdo */
                 align-items: center;
-                padding-top: 160px;
+                padding-top: 160px; /* Mantém espaço para o header fixo */
+                padding-bottom: 60px; /* Garante espaço na parte inferior */
             }
             .hero-text-content {
                 max-width: 90%; /* Aumenta a largura do texto em telas menores */
                 padding-right: 0;
-                text-align: center; /* Center text on smaller screens */
+                text-align: center; /* Centraliza o texto */
+                margin-bottom: 30px; /* Adiciona espaço abaixo do bloco de texto */
             }
             .hero-image-container {
+                /* A imagem virá depois do texto no HTML, então aparece abaixo com flex-direction: column */
                 margin-left: 0;
-                margin-bottom: 30px;
-                max-width: 50%; /* Controla o tamanho da imagem */
+                margin-bottom: 30px; /* Adiciona espaço abaixo da imagem */
+                max-width: 70%; /* Controla o tamanho da imagem em tablets */
+                width: 250px; /* Largura mais específica para a imagem em mobile */
+                height: 250px; /* Mantém a altura igual à largura para quadrado */
             }
             .hero-buttons {
                 justify-content: center;
+                flex-direction: column; /* Empilha os botões */
+                align-items: center;
+                width: 100%; /* Ocupa a largura total para centralização */
             }
             .cta-button, .instagram-button {
-                width: 80%;
+                width: 80%; /* Botões mais largos para fácil clique */
                 max-width: 350px;
+                margin-bottom: 15px; /* Espaço entre os botões empilhados */
             }
-
-            .section h2 { font-size: 2.2em; }
-            .about-content { gap: 30px; flex-direction: column; text-align: center; }
-            .about-image-container { order: -1; min-width: auto; max-width: 80%; margin: 0 auto; }
-            .about-image-container img { border-radius: 50%; width: 300px; height: auto; object-fit: cover; }
-            .about-text { min-width: auto; }
-            .services-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-            .testimonial-card { flex-basis: calc(50% - 15px); }
         }
 
         @media (max-width: 768px) {
@@ -517,30 +516,25 @@
             .section h2 { font-size: 1.8em; margin-bottom: 30px; }
             .container { padding: 0 15px; }
             .hero-section {
-                flex-direction: column; /* Empilha texto e imagem */
-                text-align: center; /* Centraliza o conteúdo */
-                align-items: center;
-                padding-top: 160px;
-            }
-            .hero-text-content {
-                max-width: 90%;
-                padding-right: 0;
-                text-align: center;
-            }
-            .hero-image-container {
-                margin-left: 0;
-                margin-bottom: 30px;
-                max-width: 70%;
+                padding-top: 140px; /* Ajuste para telas menores */
+                padding-bottom: 50px;
             }
             .hero-text-content h1 {
-                font-size: 2.4em; /* Ajusta o tamanho do título para telas menores */
+                font-size: 2.4em;
             }
             .hero-text-content .sub-title {
-                font-size: 0.9em; /* Ajusta o tamanho do subtítulo para telas menores */
+                font-size: 0.9em;
             }
             .hero-section p { font-size: 1em; }
-            .hero-buttons { flex-direction: column; align-items: center; }
-            .cta-button, .instagram-button { width: 90%; }
+            .hero-image-container {
+                width: 200px; /* Reduz ainda mais a imagem para celulares */
+                height: 200px;
+                margin-bottom: 25px;
+            }
+            .cta-button, .instagram-button {
+                width: 90%; /* Ocupa mais largura em celulares */
+                margin-bottom: 10px;
+            }
             .services-grid { grid-template-columns: 1fr; gap: 20px; }
             .service-card { padding: 25px; }
             .testimonial-card { flex-basis: 100%; }
@@ -561,7 +555,7 @@
             .logo { font-size: 1.5em; }
             .main-nav a { font-size: 0.9em; }
             .btn-whats-nav { padding: 6px 12px; font-size: 0.9em; }
-            .hero-image-container { max-width: 90%; }
+            /* Não há necessidade de mexer em hero-image-container ou cta-button/instagram-button aqui se os 768px já resolveram, mas você pode ajustar se notar problemas específicos em telas muito pequenas */
         }
     </style>
 </head>
