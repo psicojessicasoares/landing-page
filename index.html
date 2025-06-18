@@ -150,17 +150,19 @@
             font-size: 3.2em;
             color: var(--text-color-light); /* Cor branca para o texto */
             line-height: 1.2;
-            margin: 0 0 15px 0; /* Menos margem abaixo do título principal */
+            margin: 0 0 5px 0; /* Menos margem abaixo do título principal */
             font-weight: 800;
-            font-style: italic;
+            font-style: italic; /* Ajustado para não ser itálico se não for solicitado */
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra para o texto para dar destaque */
         }
 
-        .hero-text-content h1 span {
-            display: block; /* Coloca cada parte do título em uma nova linha */
-            font-size: 1em; /* Mantém o tamanho da fonte original do h1 */
-            line-height: 1.1; /* Ajusta o espaçamento entre as linhas do título */
+        .hero-text-content .sub-title {
+            font-size: 1.1em; /* Tamanho discreto para a nova linha */
+            color: rgba(255, 255, 255, 0.8); /* Cor mais clara para discreto */
+            margin-bottom: 20px; /* Espaçamento abaixo do subtítulo */
+            display: block; /* Garante que fique em uma nova linha */
         }
+
 
         .hero-section p {
             font-size: 1.3em;
@@ -211,8 +213,8 @@
         .hero-image-container {
             flex-shrink: 0; /* Não encolhe */
             width: 300px; /* Largura desejada da imagem */
-            height: 300px; /* Fixed height for circular image */
-            border-radius: 50%; /* Make it circular */
+            height: 300px; /* Fixed height for square image */
+            border-radius: 0; /* Make it square */
             overflow: hidden;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
             margin-left: 40px; /* Espaço entre o texto e a imagem */
@@ -268,7 +270,7 @@
             flex-shrink: 0; /* Não encolhe */
             width: 300px;
             height: 300px;
-            border-radius: 50%;
+            border-radius: 50%; /* Mantido circular para a seção "Sobre Mim" */
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             margin: 0 auto 20px auto; /* Centraliza em mobile */
@@ -489,7 +491,6 @@
                 text-align: center; /* Center text on smaller screens */
             }
             .hero-image-container {
-                /* Removed order: -1; as image should naturally come after text in HTML and stack if column */
                 margin-left: 0;
                 margin-bottom: 30px;
                 max-width: 50%; /* Controla o tamanho da imagem */
@@ -534,8 +535,8 @@
             .hero-text-content h1 {
                 font-size: 2.4em; /* Ajusta o tamanho do título para telas menores */
             }
-            .hero-text-content h1 span {
-                font-size: 1em; /* Mantém a proporção do título */
+            .hero-text-content .sub-title {
+                font-size: 0.9em; /* Ajusta o tamanho do subtítulo para telas menores */
             }
             .hero-section p { font-size: 1em; }
             .hero-buttons { flex-direction: column; align-items: center; }
@@ -589,10 +590,8 @@
         <section id="hero" class="hero-section">
             <div class="container">
                 <div class="hero-text-content">
-                    <h1>
-                        <span>Psicóloga Clínica</span>
-                        <span>Jéssica Soares CRP 13/10484</span>
-                    </h1>
+                    <h1>Psicóloga Clínica</h1>
+                    <span class="sub-title">Atendimentos em João Pessoa (PB) e Online em qualquer lugar do mundo</span>
                     <p>Encontre um espaço de escuta, acolhimento e desenvolvimento. Com a psicologia, você pode transformar desafios em crescimento pessoal.</p>
                     <div class="hero-buttons">
                         <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion('https://wa.me/5583986309163');">
