@@ -141,8 +141,9 @@
 
         .hero-text-content {
             flex: 1; /* Ocupa o espaço disponível */
-            max-width: 50%; /* Largura máxima do conteúdo de texto */
-            padding-right: 40px; /* Espaço entre o texto e a imagem */
+            max-width: 60%; /* Adjusted for more space for text */
+            padding-right: 20px; /* Space between text and image */
+            text-align: left; /* Aligns text to the left */
         }
 
         .hero-text-content h1 {
@@ -153,7 +154,6 @@
             font-weight: 800;
             font-style: italic;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra para o texto para dar destaque */
-            /* white-space: nowrap; REMOVIDO: Para permitir a quebra de linha natural */
         }
 
         .hero-text-content h1 span {
@@ -211,16 +211,19 @@
         .hero-image-container {
             flex-shrink: 0; /* Não encolhe */
             width: 300px; /* Largura desejada da imagem */
-            height: auto; /* Altura automática para manter a proporção */
-            border-radius: 10px; /* Opcional: bordas arredondadas */
+            height: 300px; /* Fixed height for circular image */
+            border-radius: 50%; /* Make it circular */
             overflow: hidden;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
             margin-left: 40px; /* Espaço entre o texto e a imagem */
+            display: flex; /* Use flexbox to center image if it doesn't fill */
+            justify-content: center;
+            align-items: center;
         }
 
         .hero-image-container img {
             width: 100%;
-            height: auto;
+            height: 100%;
             display: block;
             object-fit: cover; /* Cobrir o contêiner, pode cortar as bordas */
         }
@@ -483,10 +486,10 @@
             .hero-text-content {
                 max-width: 90%; /* Aumenta a largura do texto em telas menores */
                 padding-right: 0;
-                text-align: center;
+                text-align: center; /* Center text on smaller screens */
             }
             .hero-image-container {
-                order: -1; /* Move a imagem para cima do texto em telas menores */
+                /* Removed order: -1; as image should naturally come after text in HTML and stack if column */
                 margin-left: 0;
                 margin-bottom: 30px;
                 max-width: 50%; /* Controla o tamanho da imagem */
@@ -524,7 +527,6 @@
                 text-align: center;
             }
             .hero-image-container {
-                order: -1; /* Move a imagem para cima do texto em telas menores */
                 margin-left: 0;
                 margin-bottom: 30px;
                 max-width: 70%;
