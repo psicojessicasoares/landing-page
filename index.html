@@ -133,43 +133,33 @@
             padding: 120px 20px 100px;
             margin-top: 80px; /* Para não ficar embaixo do header fixo */
             position: relative;
-            display: flex;
-            align-items: center;
+            display: flex; /* Habilitar flexbox para alinhar texto e imagem */
+            align-items: center; /* Alinhar verticalmente ao centro */
             justify-content: space-between; /* Espaço entre texto e imagem */
             overflow: hidden;
         }
 
         .hero-text-content {
-            flex: 1; /* Ocupa espaço restante */
-            max-width: 50%; /* Largura máxima do texto */
-            padding-right: 40px; /* Espaço da imagem */
+            flex: 1; /* Ocupa o espaço disponível */
+            max-width: 50%; /* Largura máxima do conteúdo de texto */
+            padding-right: 40px; /* Espaço entre o texto e a imagem */
         }
 
-        .hero-image-container {
-            flex-shrink: 0; /* Não encolhe */
-            width: 300px; /* Largura desejada da imagem */
-            height: auto; /* Altura automática para manter a proporção */
-            border-radius: 10px; /* Opcional: bordas arredondadas */
-            overflow: hidden;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
-            margin-left: 40px; /* Espaço entre o texto e a imagem */
-        }
-
-        .hero-image-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover; /* Cobrir o contêiner, pode cortar as bordas */
-        }
-
-        .hero-section h1 {
+        .hero-text-content h1 {
             font-size: 3.2em;
             color: var(--text-color-light); /* Cor branca para o texto */
             line-height: 1.2;
-            margin: 0 0 25px 0;
+            margin: 0 0 15px 0; /* Menos margem abaixo do título principal */
             font-weight: 800;
             font-style: italic;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra para o texto para dar destaque */
+            /* white-space: nowrap; REMOVIDO: Para permitir a quebra de linha natural */
+        }
+
+        .hero-text-content h1 span {
+            display: block; /* Coloca cada parte do título em uma nova linha */
+            font-size: 1em; /* Mantém o tamanho da fonte original do h1 */
+            line-height: 1.1; /* Ajusta o espaçamento entre as linhas do título */
         }
 
         .hero-section p {
@@ -216,6 +206,23 @@
         .instagram-button:hover {
             background-color: #C13584; /* Tom mais escuro do Instagram */
             box-shadow: 0 8px 25px rgba(225, 48, 108, 0.5);
+        }
+
+        .hero-image-container {
+            flex-shrink: 0; /* Não encolhe */
+            width: 300px; /* Largura desejada da imagem */
+            height: auto; /* Altura automática para manter a proporção */
+            border-radius: 10px; /* Opcional: bordas arredondadas */
+            overflow: hidden;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+            margin-left: 40px; /* Espaço entre o texto e a imagem */
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover; /* Cobrir o contêiner, pode cortar as bordas */
         }
 
         /* General Sections */
@@ -474,7 +481,7 @@
                 padding-top: 160px;
             }
             .hero-text-content {
-                max-width: 90%;
+                max-width: 90%; /* Aumenta a largura do texto em telas menores */
                 padding-right: 0;
                 text-align: center;
             }
@@ -482,7 +489,7 @@
                 order: -1; /* Move a imagem para cima do texto em telas menores */
                 margin-left: 0;
                 margin-bottom: 30px;
-                max-width: 50%;
+                max-width: 50%; /* Controla o tamanho da imagem */
             }
             .hero-buttons {
                 justify-content: center;
@@ -505,11 +512,32 @@
             .section { padding: 40px 15px; }
             .section h2 { font-size: 1.8em; margin-bottom: 30px; }
             .container { padding: 0 15px; }
-            .hero-section h1 { font-size: 2.4em; }
+            .hero-section {
+                flex-direction: column; /* Empilha texto e imagem */
+                text-align: center; /* Centraliza o conteúdo */
+                align-items: center;
+                padding-top: 160px;
+            }
+            .hero-text-content {
+                max-width: 90%;
+                padding-right: 0;
+                text-align: center;
+            }
+            .hero-image-container {
+                order: -1; /* Move a imagem para cima do texto em telas menores */
+                margin-left: 0;
+                margin-bottom: 30px;
+                max-width: 70%;
+            }
+            .hero-text-content h1 {
+                font-size: 2.4em; /* Ajusta o tamanho do título para telas menores */
+            }
+            .hero-text-content h1 span {
+                font-size: 1em; /* Mantém a proporção do título */
+            }
             .hero-section p { font-size: 1em; }
             .hero-buttons { flex-direction: column; align-items: center; }
             .cta-button, .instagram-button { width: 90%; }
-            .hero-image-container { max-width: 70%; }
             .services-grid { grid-template-columns: 1fr; gap: 20px; }
             .service-card { padding: 25px; }
             .testimonial-card { flex-basis: 100%; }
@@ -559,7 +587,10 @@
         <section id="hero" class="hero-section">
             <div class="container">
                 <div class="hero-text-content">
-                    <h1>Psicóloga Clínica Jéssica Soares CRP 13/10484</h1>
+                    <h1>
+                        <span>Psicóloga Clínica</span>
+                        <span>Jéssica Soares CRP 13/10484</span>
+                    </h1>
                     <p>Encontre um espaço de escuta, acolhimento e desenvolvimento. Com a psicologia, você pode transformar desafios em crescimento pessoal.</p>
                     <div class="hero-buttons">
                         <a href="https://wa.me/5583986309163" class="cta-button" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion('https://wa.me/5583986309163');">
@@ -604,7 +635,7 @@
                     <p>Meu consultório está estrategicamente localizado no coração de João Pessoa, em **Miramar**, facilitando o acesso e a conveniência para você.</p>
                     <p>Estamos situados entre as duas maiores avenidas da cidade, oferecendo facilidade de estacionamento e acesso por diversos meios de transporte.</p>
                     <p>Um ambiente pensado para seu conforto e privacidade, ideal para o seu processo terapêutico.</p>
-                    <a href="https://www.google.com/maps/search/consult%C3%B3rio+psicologia+miramar+jo%C3%A3o+pessoa" class="map-link" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Consult%C3%B3rio+de+psicologia+Miramar+Jo%C3%A3o+Pessoa+PB" class="map-link" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-map-marker-alt"></i> Ver no Mapa
                     </a>
                 </div>
